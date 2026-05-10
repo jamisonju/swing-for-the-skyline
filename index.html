@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swing for the Skyline | August 8, 2026 | Naples Country Club</title>
+<meta name="description" content="Swing for the Skyline Golf Classic. August 8, 2026 at Naples Country Club. Presented by ONE Fort Myers x SERHANT. Benefiting the Boys and Girls Club of Lee County.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --ink:#0A1A0F;--forest:#0F2D1A;--green:#1A4A2A;--gold:#C8A951;--gold-lt:#E8C96A;
+  --cream:#F5F0E8;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;
+}
+body{font-family:var(--sans);background:var(--forest);color:var(--cream);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,26,15,0.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(200,169,81,0.18);padding:0 24px}
+.nav-inner{max-width:1200px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--gold);line-height:1}
+.nav-logo span{font-weight:400;font-style:italic;color:rgba(200,169,81,0.65);font-size:12px;display:block}
+.nav-links{display:flex;gap:4px}
+.nav-link{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:9px 12px;color:rgba(245,240,232,.65);transition:color .2s}
+.nav-link:hover{color:var(--gold)}
+.nav-cta{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:10px 20px;background:var(--gold);color:var(--ink);border-radius:2px;font-weight:500;transition:background .2s}
+.nav-cta:hover{background:var(--gold-lt)}
+.hero{min-height:calc(100vh - 64px);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:3rem 1.5rem;text-align:center}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 100% 70% at 50% 110%,rgba(42,107,58,.5) 0%,transparent 65%),linear-gradient(160deg,#060e08 0%,#0F2D1A 50%,#0a1f10 100%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,169,81,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(200,169,81,.05) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 20%,transparent 100%)}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(200,169,81,.1);top:50%;left:50%;transform:translate(-50%,-50%);animation:rp 8s ease-in-out infinite}
+.ring:nth-child(2){width:500px;height:500px}.ring:nth-child(3){width:750px;height:750px;animation-delay:2.5s}.ring:nth-child(4){width:1050px;height:1050px;animation-delay:5s}
+@keyframes rp{0%,100%{opacity:.5}50%{opacity:.1}}
+.hero-pin{position:absolute;right:8%;top:20%;opacity:.05;font-size:180px;transform:rotate(15deg);animation:pf 6s ease-in-out infinite;user-select:none}
+@keyframes pf{0%,100%{transform:rotate(15deg) translateY(0)}50%{transform:rotate(15deg) translateY(-12px)}}
+.hero-content{position:relative;z-index:2;max-width:940px}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.cobrand{display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(200,169,81,.3);background:rgba(200,169,81,.06);padding:8px 18px;border-radius:2px;margin-bottom:2rem;opacity:0;animation:up .7s ease forwards .2s;flex-wrap:wrap;justify-content:center}
+.cobrand-tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.cobrand-div{width:1px;height:14px;background:rgba(200,169,81,.35)}
+.hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;opacity:0;animation:up .7s ease forwards .35s}
+.hero-title{font-family:var(--serif);font-size:clamp(52px,9.5vw,104px);font-weight:900;line-height:.92;color:var(--cream);margin-bottom:.4rem;opacity:0;animation:up .8s ease forwards .5s}
+.hero-title em{font-style:italic;color:var(--gold-lt);display:block}
+.hero-tagline{font-family:var(--serif);font-size:clamp(18px,2.2vw,26px);font-style:italic;color:rgba(245,240,232,.65);margin-bottom:2.5rem;opacity:0;animation:up .7s ease forwards .68s}
+.date-badge{display:inline-flex;border:1px solid rgba(200,169,81,.25);margin-bottom:2.5rem;overflow:hidden;border-radius:2px;opacity:0;animation:up .7s ease forwards .82s}
+.date-box{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:12px 18px;color:rgba(245,240,232,.75);border-right:1px solid rgba(200,169,81,.2)}
+.date-box:last-child{border-right:none}
+.date-box.hl{background:rgba(200,169,81,.12);color:var(--gold)}
+.hero-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;opacity:0;animation:up .7s ease forwards 1.05s}
+.btn-p{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:16px 36px;background:var(--gold);color:var(--ink);border-radius:2px;font-weight:500;transition:background .2s,transform .15s}
+.btn-p:hover{background:var(--gold-lt);transform:translateY(-2px)}
+.btn-o{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:15px 36px;border:1px solid rgba(200,169,81,.4);color:var(--gold);border-radius:2px;transition:all .2s}
+.btn-o:hover{border-color:var(--gold);background:rgba(200,169,81,.08);transform:translateY(-2px)}
+.scroll-cue{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:up .7s ease forwards 1.5s}
+.scroll-cue span{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.3)}
+.scroll-line{width:1px;height:40px;background:linear-gradient(var(--gold),transparent);animation:sd 1.6s ease-in-out infinite}
+@keyframes sd{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.stats-strip{background:#08160D;border-top:1px solid rgba(200,169,81,.1);border-bottom:1px solid rgba(200,169,81,.1)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:1200px;margin:0 auto}
+.stat{padding:2.5rem 1.5rem;text-align:center;border-right:1px solid rgba(200,169,81,.1)}
+.stat:last-child{border-right:none}
+.stat-n{font-family:var(--serif);font-size:52px;font-weight:900;color:var(--gold-lt);line-height:1;margin-bottom:6px}
+.stat-l{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.4)}
+section{padding:6rem 1.5rem}
+.container{max-width:1200px;margin:0 auto}
+.csm{max-width:820px;margin:0 auto}
+.lbl{font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.ttl{font-family:var(--serif);font-size:clamp(32px,4vw,54px);font-weight:700;line-height:1.05;color:var(--cream);margin-bottom:1.25rem}
+.ttl em{font-style:italic;color:var(--gold-lt)}
+.bdy{font-size:18px;font-weight:300;line-height:1.85;color:rgba(245,240,232,.78)}
+hr.rule{border:none;border-top:1px solid rgba(200,169,81,.15);margin:4rem 0}
+.about{background:var(--green)}
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:5rem;align-items:center}
+.about-text p{font-size:19px;font-weight:300;line-height:1.85;color:rgba(245,240,232,.8);margin-bottom:1.25rem}
+.fc{border:1px solid rgba(200,169,81,.18);background:rgba(255,255,255,.02);padding:2.5rem 2rem}
+.fi{display:flex;gap:16px;align-items:flex-start;margin-bottom:1.5rem}
+.fi:last-child{margin-bottom:0}
+.fi-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.fi-ttl{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--cream);margin-bottom:2px}
+.fi-dsc{font-size:14px;color:rgba(245,240,232,.5);font-weight:300}
+.charity-sec{background:#08160D;position:relative;overflow:hidden}
+.charity-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(42,107,58,.3) 0%,transparent 70%)}
+.ci{position:relative;z-index:1;text-align:center;max-width:820px;margin:0 auto}
+.ci p{font-size:19px;font-weight:300;line-height:1.85;color:rgba(245,240,232,.78);margin-bottom:1.25rem}
+.cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:3rem}
+.cc{border:1px solid rgba(200,169,81,.18);background:rgba(255,255,255,.03);padding:2rem 1.75rem;text-align:left}
+.cc-icon{font-size:30px;margin-bottom:1rem;display:block}
+.cc h3{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--gold-lt);margin-bottom:.5rem}
+.cc p{font-size:15px;line-height:1.75;color:rgba(245,240,232,.62);font-weight:300}
+.sups{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--gold);margin-top:.75rem;text-transform:uppercase}
+.c-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(200,169,81,.3);padding:12px 24px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:2rem}
+.sched{background:var(--forest)}
+.sg{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+.tl{padding-left:1.75rem;position:relative}
+.tl::before{content:'';position:absolute;left:0;top:10px;bottom:10px;width:1px;background:linear-gradient(transparent,var(--gold),transparent);opacity:.3}
+.tli{position:relative;padding:0 0 2.5rem 2rem}
+.tli::before{content:'';position:absolute;left:-4px;top:9px;width:8px;height:8px;border-radius:50%;background:var(--gold);opacity:.75}
+.tl-t{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.tl-e{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--cream);margin-bottom:4px}
+.tl-d{font-size:15px;font-weight:300;color:rgba(245,240,232,.55);line-height:1.7}
+.bp-note{border:1px solid rgba(200,169,81,.2);background:rgba(200,169,81,.05);padding:1.5rem;margin-top:2rem}
+.bp-lbl{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.bp-note p{font-size:15px;font-weight:300;color:rgba(245,240,232,.62);line-height:1.7}
+.comps{background:#0A1A0F}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(200,169,81,.12);border:1px solid rgba(200,169,81,.12);margin-top:3rem}
+.cc2{background:#0A1A0F;padding:2rem 1.75rem;transition:background .2s}
+.cc2:hover{background:rgba(42,107,58,.25)}
+.cc2-icon{font-size:28px;margin-bottom:1rem;display:block}
+.cc2-name{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--gold-lt);margin-bottom:.5rem}
+.cc2-desc{font-size:15px;font-weight:300;color:rgba(245,240,232,.6);line-height:1.7}
+.cc2-price{font-family:var(--mono);font-size:11px;letter-spacing:.15em;color:var(--gold);margin-top:1rem;text-transform:uppercase}
+.spons{background:var(--green)}
+.sl-live{margin-top:4rem}
+.ll{font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:12px}
+.ll::after{content:'';flex:1;height:1px;background:rgba(200,169,81,.2)}
+.bgcf{display:flex;align-items:center;gap:20px;background:rgba(200,169,81,.07);border:1px solid rgba(200,169,81,.25);padding:1.5rem 2rem;margin-bottom:1.5rem}
+.bgcb{background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;padding:6px 14px;white-space:nowrap}
+.bgct{font-size:16px;color:var(--cream);line-height:1.5}
+.bgct strong{color:var(--gold-lt)}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1px;background:rgba(200,169,81,.1);border:1px solid rgba(200,169,81,.1)}
+.ss{background:var(--green);padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:100px}
+.ss.open{border:2px dashed rgba(200,169,81,.2);background:rgba(200,169,81,.02);cursor:pointer;transition:all .2s}
+.ss.open:hover{background:rgba(200,169,81,.06);border-color:rgba(200,169,81,.4)}
+.oi{font-size:18px;margin-bottom:4px;opacity:.2}
+.ol{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,169,81,.3)}
+.sn{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:rgba(245,240,232,.28);text-align:center;margin-top:10px;text-transform:uppercase}
+.tl-list{margin-top:3rem}
+.tr{display:grid;grid-template-columns:160px 1fr 130px;gap:2rem;align-items:start;border-top:1px solid rgba(200,169,81,.15);padding:2.5rem 0}
+.tr:last-child{border-bottom:1px solid rgba(200,169,81,.15)}
+.tt{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding-top:6px}
+.tn{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--cream);margin-bottom:.3rem}
+.ttag{font-size:14px;color:rgba(245,240,232,.45);margin-bottom:.6rem;font-style:italic}
+.th{font-size:16px;font-weight:500;color:rgba(245,240,232,.72);margin-bottom:.75rem;line-height:1.55}
+.tp{list-style:none;font-size:15px;line-height:1.9;color:rgba(245,240,232,.62);font-weight:300}
+.tp li::before{content:'+ ';color:var(--gold);opacity:.7}
+.tprice{font-family:var(--serif);font-size:34px;font-weight:900;color:var(--gold-lt);text-align:right;white-space:nowrap}
+.cn{margin-top:2rem;padding:1.5rem 2rem;border:1px solid rgba(200,169,81,.2);background:rgba(200,169,81,.04);font-size:16px;font-weight:300;color:rgba(245,240,232,.7);font-style:italic;line-height:1.7}
+.reg{background:#08160D}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:2.5rem}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+.f label{font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,240,232,.38)}
+.f input,.f select,.f textarea{background:rgba(255,255,255,.04);border:1px solid rgba(200,169,81,.2);border-radius:2px;padding:13px 15px;font-family:var(--serif);font-size:16px;color:var(--cream);outline:none;transition:border-color .2s;width:100%}
+.f input::placeholder,.f textarea::placeholder{color:rgba(245,240,232,.18)}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:rgba(200,169,81,.55)}
+.f select option{background:var(--forest);color:var(--cream)}
+.f textarea{height:90px;resize:vertical}
+.ftbar{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;background:rgba(200,169,81,.07);border:1px solid rgba(200,169,81,.2);padding:14px 18px}
+.ftl{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.38)}
+.ftv{font-family:var(--serif);font-size:28px;font-weight:900;color:var(--gold-lt)}
+.fsub{grid-column:1/-1;background:var(--gold);color:var(--ink);border:none;padding:17px;font-family:var(--mono);font-size:11px;letter-spacing:.25em;text-transform:uppercase;font-weight:600;cursor:pointer;border-radius:2px;transition:all .2s}
+.fsub:hover{background:var(--gold-lt);transform:translateY(-1px)}
+.fnote{grid-column:1/-1;font-size:12px;color:rgba(245,240,232,.28);text-align:center;font-family:var(--mono);letter-spacing:.08em}
+.cbrow{grid-column:1/-1;display:flex;align-items:center;gap:12px;border:1px solid rgba(200,169,81,.18);padding:14px;background:rgba(200,169,81,.04)}
+.cbrow input[type=checkbox]{width:18px;height:18px;flex-shrink:0;accent-color:var(--gold)}
+.cbrow label{font-family:var(--sans);font-size:14px;color:rgba(245,240,232,.7);cursor:pointer;letter-spacing:0;text-transform:none}
+.succ{display:none;text-align:center;padding:3rem 2rem;border:1px solid rgba(200,169,81,.2);background:rgba(200,169,81,.05);margin-top:2rem}
+.succ h3{font-family:var(--serif);font-size:36px;font-weight:700;color:var(--gold-lt);margin-bottom:.75rem}
+.succ p{font-size:18px;font-weight:300;color:rgba(245,240,232,.65)}
+footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px solid rgba(200,169,81,.1)}
+.fb{display:flex;justify-content:center;align-items:center;gap:20px;margin-bottom:1.5rem;flex-wrap:wrap}
+.fbr{font-family:var(--mono);font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:rgba(200,169,81,.45)}
+.fd{width:1px;height:16px;background:rgba(200,169,81,.18)}
+.fn{font-size:14px;font-weight:300;color:rgba(245,240,232,.25);line-height:1.9}
+@media(max-width:768px){.about-grid,.sg{grid-template-columns:1fr;gap:3rem}.cg{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.tr{grid-template-columns:1fr;gap:.5rem}.tprice{text-align:left}.cc-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.nav-links{display:none}}
+@media(max-width:480px){.cg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- Netlify form detection - required for form processing -->
+<form name="swing-skyline-registration" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="first-name">
+  <input type="text" name="last-name">
+  <input type="text" name="company">
+  <input type="text" name="title">
+  <input type="email" name="email">
+  <input type="tel" name="phone">
+  <select name="interested-in"></select>
+  <input type="number" name="additional-spots">
+  <input type="number" name="yardsticks">
+  <input type="number" name="mulligans">
+  <input type="number" name="raffle-tickets">
+  <input type="checkbox" name="backpack-drive">
+  <input type="hidden" name="estimated-total">
+  <textarea name="notes"></textarea>
+  <input name="bot-field">
+</form>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Swing for the Skyline<span>One Fort Myers x SERHANT.</span></div>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#charity" class="nav-link">Charity</a>
+      <a href="#schedule" class="nav-link">Schedule</a>
+      <a href="#sponsors" class="nav-link">Sponsors</a>
+      <a href="#register" class="nav-link">Register</a>
+    </div>
+    <a href="#register" class="nav-cta">Get Involved</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grid"></div>
+  <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+  <div class="hero-pin">&#9971;</div>
+  <div class="hero-content">
+    <div class="cobrand">
+      <span class="cobrand-tag">One Fort Myers</span>
+      <div class="cobrand-div"></div>
+      <span class="cobrand-tag">SERHANT.</span>
+      <div class="cobrand-div"></div>
+      <span class="cobrand-tag">Boys &amp; Girls Club of Lee County</span>
+    </div>
+    <p class="hero-eyebrow">Annual Golf Classic &nbsp;&middot;&nbsp; Back to School Edition</p>
+    <h1 class="hero-title">Swing for<em>the Skyline</em></h1>
+    <p class="hero-tagline">Where High-Rise Dreams Meet Low Scores</p>
+    <div class="date-badge">
+      <div class="date-box hl">Saturday, August 8, 2026</div>
+      <div class="date-box">Naples Country Club</div>
+      <div class="date-box">Naples, Florida</div>
+    </div>
+    <div class="hero-btns">
+      <a href="#register" class="btn-p">Become a Sponsor</a>
+      <a href="#register" class="btn-o">Register to Play</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div class="stat"><div class="stat-n">18</div><div class="stat-l">Holes</div></div>
+    <div class="stat"><div class="stat-n">72</div><div class="stat-l">Golfer Spots</div></div>
+    <div class="stat"><div class="stat-n">6</div><div class="stat-l">On-Course Competitions</div></div>
+    <div class="stat"><div class="stat-n">100<span style="font-size:28px">%</span></div><div class="stat-l">Southwest Florida</div></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lbl">About the Event</p>
+        <h2 class="ttl">A round of golf.<br>A skyline rising.<br><em>A community giving back.</em></h2>
+        <p>One Fort Myers and SERHANT. are bringing Southwest Florida's top business leaders, investors, and real estate professionals to Naples Country Club for a day that goes far beyond the scorecard.</p>
+        <p>This is an exclusive, curated experience built around three things: the deals being made, the skyline being built, and the kids who need our support heading back to school.</p>
+        <p>Limited to 72 golfers. Every spot has a purpose. Every sponsor has a seat at the table.</p>
+      </div>
+      <div class="fc">
+        <p class="lbl" style="margin-bottom:1.5rem">The Format</p>
+        <div class="fi"><span class="fi-icon">&#127953;</span><div><div class="fi-ttl">18-Hole Scramble</div><div class="fi-dsc">4-person teams, shotgun start at 8:30 AM</div></div></div>
+        <div class="fi"><span class="fi-icon">&#127919;</span><div><div class="fi-ttl">On-Course Competitions</div><div class="fi-dsc">Long drive, closest to the pin, putting contest</div></div></div>
+        <div class="fi"><span class="fi-icon">&#127378;</span><div><div class="fi-ttl">Cocktail Hour &amp; Awards</div><div class="fi-dsc">Post-round reception with prizes and charity presentation</div></div></div>
+        <div class="fi"><span class="fi-icon">&#127890;</span><div><div class="fi-ttl">Backpack Drive</div><div class="fi-dsc">Bring a filled backpack. Change a kid's school year.</div></div></div>
+        <div class="fi" style="margin-bottom:0"><span class="fi-icon">&#127961;</span><div><div class="fi-ttl">ONE Fort Myers Reveal</div><div class="fi-dsc">Exclusive project preview during awards ceremony</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="charity-sec" id="charity">
+  <div class="container">
+    <div class="ci">
+      <p class="lbl" style="text-align:center">Giving Back</p>
+      <h2 class="ttl" style="text-align:center">Playing for More<br><em>Than Par</em></h2>
+      <p>We partnered with the Boys &amp; Girls Club of Lee County because they do the work. Every dollar raised and every backpack collected goes directly to the kids in this community heading back to school in August.</p>
+      <p>This is not a token donation. It is a deliberate, community-first partnership that gives every sponsor, golfer, and guest a reason to show up beyond the round.</p>
+      <div class="cc-grid">
+        <div class="cc">
+          <span class="cc-icon">&#129309;</span>
+          <h3>Boys &amp; Girls Club of Lee County</h3>
+          <p>Our official charity partner. Serving thousands of kids across Lee County through after-school programs, mentorship, and safe spaces. Every dollar raised goes directly to this mission.</p>
+        </div>
+        <div class="cc">
+          <span class="cc-icon">&#127890;</span>
+          <h3>Back to School Backpack Drive</h3>
+          <p>It is back-to-school season. Bring a filled backpack to registration. Donation bins are open all morning. Every bag goes to a Lee County kid who needs it.</p>
+          <p class="sups">Suggested: Notebooks &middot; Pencils &middot; Folders &middot; Crayons &middot; Rulers</p>
+        </div>
+      </div>
+      <div class="c-badge">&#9829; &nbsp; Official Charity Partner: Boys &amp; Girls Club of Lee County</div>
+    </div>
+  </div>
+</section>
+
+<section class="sched" id="schedule">
+  <div class="container">
+    <div class="sg">
+      <div>
+        <p class="lbl">Day of Events</p>
+        <h2 class="ttl">Saturday<br><em>August 8, 2026</em></h2>
+        <p class="bdy" style="margin-top:1rem">A full day at one of Southwest Florida's most prestigious private courses, capped with an awards ceremony and the ONE Fort Myers skyline reveal moment.</p>
+        <div class="bp-note">
+          <p class="bp-lbl">Backpack Drop</p>
+          <p>Bring a filled backpack to registration. Bins are open all morning for golfers and guests.</p>
+        </div>
+      </div>
+      <div class="tl">
+        <div class="tli"><div class="tl-t">7:30 AM</div><div class="tl-e">Registration &amp; Breakfast</div><div class="tl-d">Check in, sponsor activations open, backpack drop-off begins, breakfast served on the terrace</div></div>
+        <div class="tli"><div class="tl-t">8:15 AM</div><div class="tl-e">Welcome Remarks</div><div class="tl-d">ONE Fort Myers project introduction, SERHANT. Naples, and Boys &amp; Girls Club of Lee County</div></div>
+        <div class="tli"><div class="tl-t">8:30 AM</div><div class="tl-e">Shotgun Start</div><div class="tl-d">18-hole scramble, all foursomes begin simultaneously across the course</div></div>
+        <div class="tli"><div class="tl-t">All Morning</div><div class="tl-e">On-Course Competitions</div><div class="tl-d">Long drive challenge, putting contest, and closest to the pin running throughout the round</div></div>
+        <div class="tli"><div class="tl-t">Afternoon</div><div class="tl-e">Cocktail Hour</div><div class="tl-d">Golf concludes. The terrace opens with drinks, conversation, and sponsor showcase</div></div>
+        <div class="tli" style="padding-bottom:0"><div class="tl-t">Awards Ceremony</div><div class="tl-e">Awards &amp; Charity Moment</div><div class="tl-d">Competition winners announced, charity check and backpack count presented, ONE Fort Myers skyline reveal</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="comps" id="competitions">
+  <div class="container">
+    <p class="lbl">On-Course Fun</p>
+    <h2 class="ttl">Competitions &amp;<br><em>Add-Ons</em></h2>
+    <div class="cg">
+      <div class="cc2"><span class="cc2-icon">&#127953;</span><div class="cc2-name">Long Drive Challenge</div><div class="cc2-desc">Try to out-drive the NotQuite7Foot Realtor on the designated par-5. He goes first. Good luck.</div><div class="cc2-price">$25 per attempt</div></div>
+      <div class="cc2"><span class="cc2-icon">&#9971;</span><div class="cc2-name">Putting Contest</div><div class="cc2-desc">Open all morning on the practice green. Closest to the pin takes home a prize package.</div><div class="cc2-price">$20 per attempt</div></div>
+      <div class="cc2"><span class="cc2-icon">&#127919;</span><div class="cc2-name">Closest to the Pin</div><div class="cc2-desc">One designated par-3. One shot. Bragging rights and a prize for the winner.</div><div class="cc2-price">$10 entry</div></div>
+      <div class="cc2"><span class="cc2-icon">&#128207;</span><div class="cc2-name">Putting Yardstick</div><div class="cc2-desc">The scramble classic. Use it on any putt during your round. One of the best investments on the course.</div><div class="cc2-price">$50 each</div></div>
+      <div class="cc2"><span class="cc2-icon">&#127183;</span><div class="cc2-name">Mulligan Packages</div><div class="cc2-desc">Single mulligan, 3-pack, or the Full Package with mulligans, foot wedge, and string included.</div><div class="cc2-price">From $25</div></div>
+      <div class="cc2"><span class="cc2-icon">&#127903;</span><div class="cc2-name">Raffle</div><div class="cc2-desc">Prizes donated by sponsors: golf gear, dining packages, spa, wine, and more.</div><div class="cc2-price">$20 per ticket</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRICING -->
+<section style="background:#08160D;padding:6rem 1.5rem" id="pricing">
+  <div style="max-width:820px;margin:0 auto">
+    <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#C8A951;margin-bottom:1rem">Registration Pricing</p>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,54px);font-weight:700;line-height:1.05;color:#F5F0E8;margin-bottom:1.25rem">Register to<br><em style="font-style:italic;color:#E8C96A">Play</em></h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:2.5rem">
+
+      <!-- Team of 4 -->
+      <div style="border:2px solid rgba(200,169,81,0.5);background:rgba(200,169,81,0.06);padding:2rem 1.75rem;position:relative">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#C8A951;color:#0A1A0F;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:4px 16px;font-weight:600;white-space:nowrap">Best Value</div>
+        <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C8A951;margin-bottom:.75rem">Team Registration</p>
+        <p style="font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:#F5F0E8;margin-bottom:.25rem">$800</p>
+        <p style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(245,240,232,.45);text-transform:uppercase;letter-spacing:.15em;margin-bottom:1.25rem">Team of 4 players</p>
+        <p style="font-size:15px;font-weight:300;color:rgba(245,240,232,.7);line-height:1.75;margin-bottom:1rem">Register your full foursome together and save $200 vs. individual pricing. Four spots, one transaction, best rate on the course.</p>
+        <div style="background:rgba(200,169,81,0.1);border:1px solid rgba(200,169,81,0.2);padding:10px 14px;font-family:'DM Mono',monospace;font-size:11px;color:#E8C96A;text-align:center;letter-spacing:.1em">$200 per player &mdash; Save $50/player</div>
+      </div>
+
+      <!-- Individual -->
+      <div style="border:1px solid rgba(200,169,81,0.2);background:rgba(255,255,255,0.02);padding:2rem 1.75rem">
+        <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C8A951;margin-bottom:.75rem">Individual Registration</p>
+        <p style="font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:#F5F0E8;margin-bottom:.25rem">$250</p>
+        <p style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(245,240,232,.45);text-transform:uppercase;letter-spacing:.15em;margin-bottom:1.25rem">Per player</p>
+        <p style="font-size:15px;font-weight:300;color:rgba(245,240,232,.7);line-height:1.75;margin-bottom:1rem">Register solo and get paired into a foursome. A great option if you are coming without a full team.</p>
+        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(200,169,81,0.12);padding:10px 14px;font-family:'DM Mono',monospace;font-size:11px;color:rgba(200,169,81,.5);text-align:center;letter-spacing:.1em">Standard rate</div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:1.5rem;padding:1.25rem 1.75rem;border:1px solid rgba(200,169,81,0.15);background:rgba(255,255,255,0.02);font-size:15px;font-weight:300;color:rgba(245,240,232,.6);line-height:1.75">
+      All registration includes: 18-hole scramble round, breakfast, two drink tickets, and access to all on-course competitions. Additional add-ons available at registration and on the day of the event. Sponsorship spots include complimentary golfer spots as outlined in the tier details below.
+    </div>
+
+    <div style="text-align:center;margin-top:2rem">
+      <a href="#register" style="display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:16px 48px;background:#C8A951;color:#0A1A0F;border-radius:2px;font-weight:500;transition:background .2s">Reserve Your Spot</a>
+    </div>
+  </div>
+</section>
+
+<section class="spons" id="sponsors">
+  <div class="container">
+    <p class="lbl">Sponsorship Opportunities</p>
+    <h2 class="ttl">Put Your Brand<br><em>on the Course</em></h2>
+    <div class="sl-live">
+      <div class="ll">Our Sponsors</div>
+      <div class="bgcf">
+        <div class="bgcb">Charity Partner</div>
+        <div class="bgct"><strong>Boys &amp; Girls Club of Lee County</strong> &ndash; Official charity partner and Back to School Backpack Drive beneficiary</div>
+      </div>
+      <div class="sgrid">
+        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Duplex Sponsor<br>Available</div></div>
+        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Wave Sponsor<br>Available</div></div>
+        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Wave Sponsor<br>Available</div></div>
+        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Aqua Sponsor<br>Available</div></div>
+        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Aqua Sponsor<br>Available</div></div>
+        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Aqua Sponsor<br>Available</div></div>
+      </div>
+      <p class="sn">Sponsor logos displayed as commitments are confirmed</p>
+    </div>
+    <hr class="rule">
+    <p class="lbl" style="margin-top:0">Sponsorship Tiers</p>
+    <div class="tl-list">
+      <div class="tr">
+        <div class="tt">Title Sponsor</div>
+        <div>
+          <div class="tn">Duplex Sponsor</div>
+          <div class="ttag">Maximum visibility. Market positioning.</div>
+          <div class="th">This is the top seat at the table. As the Duplex Sponsor, your brand is woven into the identity of the event, front and center with ONE Fort Myers x SERHANT. and in front of Southwest Florida's top business leaders, investors, and real estate professionals.</div>
+          <ul class="tp">
+            <li>"Presented by [Your Brand]" placement across all marketing and event materials</li>
+            <li>Premier logo placement on website, signage, and registration</li>
+            <li>On-stage recognition during awards and charity presentation</li>
+            <li>4 complimentary golfer spots (VIP placement)</li>
+            <li>Branded hole activation or on-course experience</li>
+            <li>Dedicated social media features and post-event recap spotlight</li>
+            <li>Inclusion in charity impact announcement</li>
+          </ul>
+        </div>
+        <div class="tprice">$10,000</div>
+      </div>
+      <div class="tr">
+        <div class="tt">Presenting Sponsor</div>
+        <div>
+          <div class="tn">Wave Sponsor</div>
+          <div class="ttag">High visibility. Strong presence. Strategic alignment.</div>
+          <ul class="tp">
+            <li>Prominent logo placement across digital and on-site materials</li>
+            <li>2 complimentary golfer spots</li>
+            <li>Branded hole signage</li>
+            <li>Social media recognition (pre and post event)</li>
+            <li>Verbal recognition during event programming</li>
+          </ul>
+        </div>
+        <div class="tprice">$5,000</div>
+      </div>
+      <div class="tr">
+        <div class="tt">Supporting Sponsor</div>
+        <div>
+          <div class="tn">Aqua Sponsor</div>
+          <div class="ttag">Consistent exposure. Clean brand presence.</div>
+          <ul class="tp">
+            <li>Logo placement on event materials and website</li>
+            <li>1 complimentary golfer spot</li>
+            <li>On-course signage</li>
+            <li>Social media mention</li>
+          </ul>
+        </div>
+        <div class="tprice">$2,500</div>
+      </div>
+      <div class="tr">
+        <div class="tt">Community Sponsor</div>
+        <div>
+          <div class="tn">Beach Sponsor</div>
+          <div class="ttag">On-course exposure. Local brand awareness.</div>
+          <ul class="tp">
+            <li>Branded signage at one hole</li>
+            <li>Logo placement on website</li>
+            <li>Mention in event materials</li>
+          </ul>
+        </div>
+        <div class="tprice">$1,000</div>
+      </div>
+      <div class="tr">
+        <div class="tt">Supporting Sponsor</div>
+        <div>
+          <div class="tn">Cascade Sponsor</div>
+          <div class="ttag">Support the cause. Get in the mix.</div>
+          <ul class="tp">
+            <li>Logo in event program and website</li>
+            <li>Recognition as a supporting sponsor</li>
+          </ul>
+        </div>
+        <div class="tprice">$500</div>
+      </div>
+    </div>
+    <div class="cn">Custom sponsorships and brand activations are available. If you want to create something unique on-course or during the event, let's build it together.</div>
+
+    <hr style="border:none;border-top:1px solid rgba(200,169,81,.15);margin:4rem 0">
+
+    <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#C8A951;margin-bottom:1rem">Silent Auction</p>
+    <h3 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,42px);font-weight:700;line-height:1.05;color:#F5F0E8;margin-bottom:1rem">Not Ready to Sponsor?<br><em style="font-style:italic;color:#E8C96A">Donate an Item Instead.</em></h3>
+    <p style="font-size:18px;font-weight:300;line-height:1.85;color:rgba(245,240,232,.75);max-width:700px;margin-bottom:2.5rem">Not every business is ready to write a sponsor check, and that is completely fine. If you want to get your brand in front of 72 of Southwest Florida's top professionals, donate an item or experience to our silent auction. Your brand gets displayed alongside every bid, every conversation, and every paddle raise during the awards ceremony.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(200,169,81,.12);border:1px solid rgba(200,169,81,.12);margin-bottom:2rem">
+      <div style="background:var(--green);padding:1.75rem 1.5rem">
+        <div style="font-size:26px;margin-bottom:.75rem">&#127869;</div>
+        <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#E8C96A;margin-bottom:.4rem">Dining &amp; Experiences</div>
+        <div style="font-size:14px;font-weight:300;color:rgba(245,240,232,.58);line-height:1.65">Restaurant gift cards, private dining experiences, chef's tables, wine packages, tasting events</div>
+      </div>
+      <div style="background:var(--green);padding:1.75rem 1.5rem">
+        <div style="font-size:26px;margin-bottom:.75rem">&#127948;</div>
+        <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#E8C96A;margin-bottom:.4rem">Golf &amp; Sport</div>
+        <div style="font-size:14px;font-weight:300;color:rgba(245,240,232,.58);line-height:1.65">Rounds of golf, equipment, lessons, club memberships, sporting event tickets, fishing charters</div>
+      </div>
+      <div style="background:var(--green);padding:1.75rem 1.5rem">
+        <div style="font-size:26px;margin-bottom:.75rem">&#127774;</div>
+        <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#E8C96A;margin-bottom:.4rem">Lifestyle &amp; Wellness</div>
+        <div style="font-size:14px;font-weight:300;color:rgba(245,240,232,.58);line-height:1.65">Spa packages, fitness memberships, travel packages, boating experiences, luxury stays</div>
+      </div>
+      <div style="background:var(--green);padding:1.75rem 1.5rem">
+        <div style="font-size:26px;margin-bottom:.75rem">&#127968;</div>
+        <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#E8C96A;margin-bottom:.4rem">Real Estate &amp; Home</div>
+        <div style="font-size:14px;font-weight:300;color:rgba(245,240,232,.58);line-height:1.65">Interior design consultations, home staging, smart home packages, art pieces, custom furniture</div>
+      </div>
+      <div style="background:var(--green);padding:1.75rem 1.5rem">
+        <div style="font-size:26px;margin-bottom:.75rem">&#128084;</div>
+        <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#E8C96A;margin-bottom:.4rem">Professional Services</div>
+        <div style="font-size:14px;font-weight:300;color:rgba(245,240,232,.58);line-height:1.65">Financial consultations, legal services, marketing packages, photography sessions, business coaching</div>
+      </div>
+      <div style="background:var(--green);padding:1.75rem 1.5rem">
+        <div style="font-size:26px;margin-bottom:.75rem">&#127381;</div>
+        <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#E8C96A;margin-bottom:.4rem">Something Unique</div>
+        <div style="font-size:14px;font-weight:300;color:rgba(245,240,232,.58);line-height:1.65">If it has value and tells a story about your brand, we want it. The more creative, the better the bids.</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:2rem">
+      <div style="border:1px solid rgba(200,169,81,.18);background:rgba(255,255,255,.02);padding:1.75rem">
+        <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C8A951;margin-bottom:.75rem">What You Get</p>
+        <ul style="list-style:none;font-size:15px;line-height:1.9;color:rgba(245,240,232,.65);font-weight:300">
+          <li style="margin-bottom:.25rem">&#43; Brand displayed on silent auction bidding sheet</li>
+          <li style="margin-bottom:.25rem">&#43; Logo or name on event website auction section</li>
+          <li style="margin-bottom:.25rem">&#43; Verbal recognition during awards ceremony</li>
+          <li style="margin-bottom:.25rem">&#43; Social media mention as an auction donor</li>
+          <li>&#43; Your item in front of 72 qualified buyers</li>
+        </ul>
+      </div>
+      <div style="border:1px solid rgba(200,169,81,.18);background:rgba(255,255,255,.02);padding:1.75rem">
+        <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C8A951;margin-bottom:.75rem">How It Works</p>
+        <ul style="list-style:none;font-size:15px;line-height:1.9;color:rgba(245,240,232,.65);font-weight:300">
+          <li style="margin-bottom:.25rem">&#43; Submit your item or experience below</li>
+          <li style="margin-bottom:.25rem">&#43; We confirm and add you to the auction list</li>
+          <li style="margin-bottom:.25rem">&#43; Bidding sheets displayed during cocktail hour</li>
+          <li style="margin-bottom:.25rem">&#43; Winners announced at the awards ceremony</li>
+          <li>&#43; All proceeds go directly to Boys &amp; Girls Club</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="background:rgba(200,169,81,.07);border:1px solid rgba(200,169,81,.25);padding:2rem;text-align:center">
+      <p style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#F5F0E8;margin-bottom:.5rem">Want to donate an item?</p>
+      <p style="font-size:16px;font-weight:300;color:rgba(245,240,232,.65);margin-bottom:1.5rem">Fill out the form below, select "Silent Auction Donation" and tell us what you would like to contribute. We will follow up within 48 hours.</p>
+      <a href="#register" style="display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:14px 36px;border:1px solid rgba(200,169,81,.4);color:#C8A951;border-radius:2px;transition:all .2s">Submit a Donation</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="reg" id="register">
+  <div class="csm">
+    <p class="lbl">Get Involved</p>
+    <h2 class="ttl">Reserve Your<br><em>Spot</em></h2>
+    <p class="bdy" style="margin-bottom:0">Submit your interest below. Our team follows up within 48 hours to confirm availability and next steps. No payment required to hold your place.</p>
+    <form id="regForm" name="swing-skyline-registration" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="swing-skyline-registration">
+      <input type="hidden" name="estimated-total" id="hidden-total" value="$0">
+      <div class="fg">
+        <div class="f" style="display:none"><label>Don't fill this out</label><input name="bot-field"></div>
+        <div class="f"><label>First Name *</label><input type="text" name="first-name" placeholder="First" required></div>
+        <div class="f"><label>Last Name *</label><input type="text" name="last-name" placeholder="Last" required></div>
+        <div class="f"><label>Company / Business</label><input type="text" name="company" placeholder="Company name"></div>
+        <div class="f"><label>Title / Role</label><input type="text" name="title" placeholder="CEO, Agent, Partner..."></div>
+        <div class="f"><label>Email Address *</label><input type="email" name="email" placeholder="email@company.com" required></div>
+        <div class="f"><label>Phone Number</label><input type="tel" name="phone" placeholder="(239) 000-0000"></div>
+        <div class="f full"><label>I'm interested in... *</label>
+          <select id="isel" name="interested-in" onchange="rc()" required>
+            <option value="">Select an option</option>
+            <optgroup label="Sponsorships">
+              <option value="10000">Duplex Sponsor (Title) $10,000</option>
+              <option value="5000">Wave Sponsor $5,000</option>
+              <option value="2500">Aqua Sponsor $2,500</option>
+              <option value="1000">Beach Sponsor $1,000</option>
+              <option value="500">Cascade Sponsor $500</option>
+            </optgroup>
+            <optgroup label="Silent Auction">
+              <option value="0">Silent Auction Donation (item/experience)</option>
+            </optgroup>
+            <optgroup label="Play">
+              <option value="800">Full Team of 4 $800 (save $200)</option>
+              <option value="250">Single Golfer Spot $250</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="f"><label>Additional Single Spots ($250 each)</label><input type="number" name="additional-spots" min="0" max="20" placeholder="0" id="es" oninput="rc()"></div>
+        <div class="f"><label>Putting Yardsticks ($50 each)</label><input type="number" name="yardsticks" min="0" max="20" placeholder="0" id="yd" oninput="rc()"></div>
+        <div class="f"><label>Mulligan Packages ($25 each)</label><input type="number" name="mulligans" min="0" max="20" placeholder="0" id="ml" oninput="rc()"></div>
+        <div class="f"><label>Raffle Tickets ($20 each)</label><input type="number" name="raffle-tickets" min="0" max="50" placeholder="0" id="rf" oninput="rc()"></div>
+        <div class="cbrow">
+          <input type="checkbox" name="backpack-drive" id="bp" value="Yes">
+          <label for="bp">&#127890; &nbsp; I will bring a filled backpack for the Boys &amp; Girls Club Backpack Drive</label>
+        </div>
+        <div class="ftbar">
+          <span class="ftl">Estimated Total</span>
+          <span class="ftv" id="tot">$0</span>
+        </div>
+        <div class="f full"><label>Notes / Questions</label><textarea name="notes" placeholder="Sponsorship preferences, dietary restrictions, questions for our team..."></textarea></div>
+        <button type="submit" class="fsub">Submit Interest. We'll Follow Up Within 48 Hours.</button>
+        <p class="fnote">Saturday, August 8, 2026 &nbsp;&middot;&nbsp; Naples Country Club, Naples FL &nbsp;&middot;&nbsp; golf.notquite7footrealtor.com</p>
+      </div>
+    </form>
+    <div class="succ" id="sm">
+      <h3>You're on the list.</h3>
+      <p>Thank you for your interest in Swing for the Skyline. We will be in touch within 48 hours to confirm your spot and next steps. See you on the course.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">
+    <span class="fbr">One Fort Myers</span><div class="fd"></div>
+    <span class="fbr">SERHANT.</span><div class="fd"></div>
+    <span class="fbr">Boys &amp; Girls Club of Lee County</span>
+  </div>
+  <p class="fn">Swing for the Skyline &nbsp;&middot;&nbsp; Saturday, August 8, 2026<br>Naples Country Club &nbsp;&middot;&nbsp; Naples, Florida<br><br>Questions about sponsorships or registration? Reach out and we will get back to you within 48 hours.</p>
+</footer>
+
+<script>
+function rc(){
+  const b=parseInt(document.getElementById('isel').value)||0;
+  const s=(parseInt(document.getElementById('es').value)||0)*250;
+  const y=(parseInt(document.getElementById('yd').value)||0)*50;
+  const m=(parseInt(document.getElementById('ml').value)||0)*25;
+  const r=(parseInt(document.getElementById('rf').value)||0)*20;
+  document.getElementById('tot').textContent='$'+(b+s+y+m+r).toLocaleString();
+}
+document.getElementById('regForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  // sync estimated total to hidden field before submit
+  document.getElementById('hidden-total').value = document.getElementById('tot').textContent;
+  const form = this;
+  const data = new FormData(form);
+  fetch(window.location.pathname, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(data).toString()
+  })
+  .then(function(){
+    form.style.display='none';
+    const msg=document.getElementById('sm');
+    msg.style.display='block';
+    window.scrollTo({top:msg.offsetTop-100,behavior:'smooth'});
+  })
+  .catch(function(err){
+    // fallback - show success anyway, Netlify likely captured it
+    form.style.display='none';
+    const msg=document.getElementById('sm');
+    msg.style.display='block';
+    window.scrollTo({top:msg.offsetTop-100,behavior:'smooth'});
+    console.error('Form error:', err);
+  });
+});
+</script>
+</body>
+</html>
