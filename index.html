@@ -168,7 +168,31 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
 .fbr{font-family:var(--mono);font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:rgba(200,169,81,.45)}
 .fd{width:1px;height:16px;background:rgba(200,169,81,.18)}
 .fn{font-size:14px;font-weight:300;color:rgba(245,240,232,.25);line-height:1.9}
-@media(max-width:768px){.about-grid,.sg{grid-template-columns:1fr;gap:3rem}.cg{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.tr{grid-template-columns:1fr;gap:.5rem}.tprice{text-align:left}.cc-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.nav-links{display:none}}
+.about-closing{font-family:var(--serif);font-size:19px;font-style:italic;color:var(--gold-lt);margin-top:2.5rem;line-height:1.7}
+.venue-photo-wrap{margin-bottom:3rem;border:1px solid rgba(200,169,81,.18);overflow:hidden;border-radius:2px;background:rgba(0,0,0,.2)}
+.venue-photo{display:block;width:100%;height:clamp(220px,42vw,480px);object-fit:cover}
+.venue-caption{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.45);padding:12px 16px;text-align:center;background:rgba(0,0,0,.15)}
+.hosts{background:#08160D;position:relative;overflow:hidden}
+.hosts::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(42,107,58,.25) 0%,transparent 70%)}
+.hosts-inner{position:relative;z-index:1}
+.hosts-intro{font-size:18px;font-weight:300;line-height:1.85;color:rgba(245,240,232,.72);max-width:720px;margin-bottom:3rem}
+.hosts-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.host-card{border:1px solid rgba(200,169,81,.18);background:rgba(255,255,255,.03);overflow:hidden}
+.host-photo-wrap{aspect-ratio:4/5;overflow:hidden;background:rgba(0,0,0,.2)}
+.host-photo{display:block;width:100%;height:100%;object-fit:cover}
+.host-body{padding:1.75rem 1.5rem}
+.host-name{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--gold-lt);margin-bottom:.35rem}
+.host-title{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.host-bio{font-size:15px;font-weight:300;line-height:1.8;color:rgba(245,240,232,.65)}
+.hosts-close{font-family:var(--serif);font-size:18px;font-style:italic;color:rgba(245,240,232,.75);text-align:center;max-width:820px;margin:3rem auto 0;line-height:1.85}
+.pricing-urgency{font-size:16px;font-weight:300;line-height:1.85;color:rgba(245,240,232,.55);text-align:center;max-width:720px;margin:2rem auto 0}
+.faq-sec{background:var(--forest)}
+.faq-list{max-width:820px;margin:2.5rem auto 0}
+.faq-item{border-top:1px solid rgba(200,169,81,.15);padding:1.75rem 0}
+.faq-item:last-child{border-bottom:1px solid rgba(200,169,81,.15)}
+.faq-q{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--cream);margin-bottom:.75rem;line-height:1.35}
+.faq-a{font-size:16px;font-weight:300;line-height:1.8;color:rgba(245,240,232,.65)}
+@media(max-width:768px){.about-grid,.sg,.hosts-grid{grid-template-columns:1fr;gap:3rem}.cg{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.tr{grid-template-columns:1fr;gap:.5rem}.tprice{text-align:left}.cc-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.nav-links{display:none}.venue-photo{height:clamp(200px,55vw,320px)}}
 @media(max-width:480px){.cg{grid-template-columns:1fr}}
 </style>
 </head>
@@ -246,6 +270,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
         <p class="lbl">About the Event</p>
         <h2 class="ttl">A luxury charity golf experience.<br><em>A community giving back.</em></h2>
         <p>A luxury charity golf experience hosted by Justin Jamison and Geoff Moore, presented by ONE Fort Myers. An elevated golf outing bringing together Southwest Florida real estate, development, business, and lifestyle leaders.</p>
+        <p>Most events in Southwest Florida slow down during the summer. We saw that as an opportunity, not a reason to wait. With back to school season around the corner, August felt like the right time to bring the community together in support of local kids and families who need it most.</p>
         <p>This is a curated day at Naples Country Club built around great golf, meaningful connections, and real impact for kids heading back to school in Lee County.</p>
         <p>Limited to 72 golfers. Every spot has a purpose. Every sponsor has a seat at the table.</p>
       </div>
@@ -258,6 +283,38 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
         <div class="fi" style="margin-bottom:0"><span class="fi-icon">&#127961;</span><div><div class="fi-ttl">Awards &amp; Charity Presentation</div><div class="fi-dsc">Competition winners, charity moment, and closing celebration on the terrace</div></div></div>
       </div>
     </div>
+    <p class="about-closing">This is the first chapter. We plan to be back every year.</p>
+  </div>
+</section>
+
+<section class="hosts" id="hosts">
+  <div class="container hosts-inner">
+    <p class="lbl">Meet Your Hosts</p>
+    <h2 class="ttl">Justin Jamison<br><em>&amp; Geoff Moore</em></h2>
+    <p class="hosts-intro">A day built around golf, community, and giving back to Southwest Florida.</p>
+    <div class="hosts-grid">
+      <article class="host-card">
+        <div class="host-photo-wrap">
+          <img class="host-photo" src="assets/AshAndJessPhotography-Justin-3.jpg" alt="Justin Jamison, co-host of Swing for the Skyline" width="800" height="1000" loading="lazy" decoding="async">
+        </div>
+        <div class="host-body">
+          <h3 class="host-name">Justin Jamison</h3>
+          <p class="host-title">Luxury Real Estate Advisor | SERHANT.</p>
+          <p class="host-bio">Justin Jamison is one of the more recognizable names in Southwest Florida real estate, known for his relationship driven approach and his personal brand, NotQuite7FootRealtor. Standing 6 foot 10, Justin first made his mark as a Division I basketball player and professional baseball player before transitioning into luxury real estate. Today, he helps buyers, investors, and families navigate the Southwest Florida market across Fort Myers, Cape Coral, Naples, and beyond. Through Swing for the Skyline, Justin wanted to create an event that brings together business leaders and the local community around a meaningful cause.</p>
+        </div>
+      </article>
+      <article class="host-card">
+        <div class="host-photo-wrap">
+          <img class="host-photo" src="assets/075b5f97-3438-4439-b739-6dc2523bca5b.webp" alt="Geoff Moore, co-host of Swing for the Skyline" width="800" height="1000" loading="lazy" decoding="async">
+        </div>
+        <div class="host-body">
+          <h3 class="host-name">Geoff Moore</h3>
+          <p class="host-title">REALTOR&reg; | SERHANT.</p>
+          <p class="host-bio">Before real estate, Geoff Moore spent years in the professional golf world as both a teaching professional and competitive player, competing throughout North America in mini tour, Web.com, and PGA sanctioned events. His background in golf and deep knowledge of Southwest Florida have helped him build strong relationships throughout the local community and luxury market. Geoff also serves on the board of a nonprofit supporting at risk youth, making this event a natural extension of causes he has long cared about. Known for his approachable personality and first class client experience, Geoff brings both authenticity and passion to the event.</p>
+        </div>
+      </article>
+    </div>
+    <p class="hosts-close">Together, Justin and Geoff created Swing for the Skyline to bring people together around great golf, meaningful relationships, and a shared commitment to supporting local kids and families in Southwest Florida.</p>
   </div>
 </section>
 
@@ -288,6 +345,10 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
 
 <section class="sched" id="schedule">
   <div class="container">
+    <figure class="venue-photo-wrap">
+      <img class="venue-photo" src="assets/country_club_of_naples.jpg" alt="Aerial view of Naples Country Club" width="1600" height="900" loading="lazy" decoding="async">
+      <figcaption class="venue-caption">Naples Country Club, Naples, Florida</figcaption>
+    </figure>
     <div class="sg">
       <div>
         <p class="lbl">Day of Events</p>
@@ -359,8 +420,51 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
       All registration includes: 18-hole scramble round, breakfast, two drink tickets, and access to all on-course competitions. Additional add-ons available at registration and on the day of the event. Sponsorship spots include complimentary golfer spots as outlined in the tier details below. <strong>100% of net proceeds benefit the Boys &amp; Girls Club of Lee County.</strong>
     </div>
 
+    <p class="pricing-urgency">Swing for the Skyline is limited to 72 total golfers to keep the experience intimate and high quality. Sponsor packages include reserved golfer spots, which means individual registration availability is limited. If you are planning to play, we encourage registering early once spots open.</p>
+
     <div style="text-align:center;margin-top:2rem">
       <a href="#register" style="display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:16px 48px;background:#C8A951;color:#0A1A0F;border-radius:2px;font-weight:500;transition:background .2s">Reserve Your Spot</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq-sec" id="faq">
+  <div class="container">
+    <p class="lbl">Questions</p>
+    <h2 class="ttl">Frequently Asked<br><em>Questions</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-q">What is the dress code?</h3>
+        <p class="faq-a">Naples Country Club is a private club and proper golf attire is required. Collared shirts, golf shorts or slacks, and golf shoes are encouraged. Denim, gym attire, and overly casual clothing are not permitted.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Can guests attend the cocktail hour and awards if they are not golfing?</h3>
+        <p class="faq-a">Yes. Guests are welcome to attend the post-round cocktail hour and awards celebration. Please note guest spots are subject to capacity and should be confirmed with the event team in advance.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">What is included with registration?</h3>
+        <p class="faq-a">Golf registration includes tournament play, cart access, practice facilities, on-course refreshments, tournament gifting, cocktail hour access, and the awards reception following play.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">What if I register as an individual and not a full team?</h3>
+        <p class="faq-a">Individual golfers are welcome. We will pair individual players with other guests and sponsors to create balanced foursomes and a great experience throughout the day.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Is the backpack drive donation required?</h3>
+        <p class="faq-a">No. The backpack drive is completely optional but strongly encouraged for anyone who would like to contribute additional support to local students and families in Lee County heading into the school year.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">How are sponsorships confirmed?</h3>
+        <p class="faq-a">Sponsorship opportunities are reserved once a commitment is confirmed with the event team. Payment is required to officially secure and hold your sponsorship placement.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">When will golfers and sponsors receive event details?</h3>
+        <p class="faq-a">Registered golfers and sponsors will receive confirmation details, arrival information, and event updates leading up to tournament week. Sponsor branding and coordination information will be provided separately.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Are custom sponsorship packages available?</h3>
+        <p class="faq-a">Yes. If none of the listed tiers fit your goals or budget, reach out and we will build something together.</p>
+      </div>
     </div>
   </div>
 </section>
