@@ -40,9 +40,11 @@ nav{position:sticky;top:0;z-index:50;background:rgba(10,26,15,0.92);backdrop-fil
 .hero-title em{font-style:italic;color:var(--gold-lt);display:block}
 .hero-presented-block{margin-bottom:1.25rem;opacity:0;animation:up .7s ease forwards .62s}
 .hero-presented{font-family:var(--mono);font-size:clamp(11px,1.4vw,13px);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
-.hero-logos{display:flex;align-items:center;justify-content:center;gap:clamp(16px,4vw,40px);flex-wrap:wrap;padding:0 .5rem}
-.hero-logo{height:clamp(32px,5vw,48px);width:auto;max-width:min(160px,30vw);object-fit:contain;flex:0 1 auto}
-.hero-logo--blend,.ss-logo--blend{mix-blend-mode:screen}
+.hero-logos{display:flex;align-items:center;justify-content:center;gap:clamp(20px,4vw,48px);flex-wrap:wrap;padding:0 .5rem}
+.hero-logo{display:block;object-fit:contain;flex:0 1 auto;width:auto}
+.hero-logo--one{height:clamp(36px,5vw,52px);max-width:min(150px,28vw)}
+.hero-logo--serhant{height:clamp(44px,6.5vw,64px);max-width:min(320px,48vw)}
+.hero-logo--grove{height:clamp(38px,5.5vw,56px);max-width:min(260px,42vw)}
 .hero-hosted{font-family:var(--serif);font-size:clamp(17px,2vw,24px);font-style:italic;color:rgba(245,240,232,.8);margin-bottom:.5rem;opacity:0;animation:up .7s ease forwards .72s}
 .hero-benefit{font-family:var(--mono);font-size:clamp(9px,1.1vw,11px);letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.5);margin-bottom:2.5rem;opacity:0;animation:up .7s ease forwards .8s}
 .hero-tagline{font-family:var(--serif);font-size:clamp(16px,1.8vw,22px);font-style:italic;color:rgba(245,240,232,.55);margin-bottom:2rem;opacity:0;animation:up .7s ease forwards .68s}
@@ -125,7 +127,10 @@ hr.rule{border:none;border-top:1px solid rgba(200,169,81,.15);margin:4rem 0}
 .ss{background:var(--green);padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:100px}
 .ss.confirmed{background:rgba(200,169,81,.1);border:1px solid rgba(200,169,81,.35);cursor:default}
 .ss.confirmed .ol{color:var(--gold);opacity:1}
-.ss-logo{max-width:140px;width:100%;height:auto;margin-bottom:12px;display:block;object-fit:contain}
+.ss-logo{margin-bottom:12px;display:block;object-fit:contain;width:auto;height:auto}
+.ss-logo--one{max-height:48px;max-width:130px}
+.ss-logo--serhant{max-height:56px;max-width:220px}
+.ss-logo--grove{max-height:52px;max-width:200px}
 .sponsor-tier{margin-top:2.5rem}
 .sponsor-tier:first-of-type{margin-top:0}
 .sponsor-tier-hd{font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:12px}
@@ -133,7 +138,9 @@ hr.rule{border:none;border-top:1px solid rgba(200,169,81,.15);margin:4rem 0}
 .sponsor-tier--featured{margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(200,169,81,.2)}
 .sponsor-tier--featured .sgrid{background:rgba(200,169,81,.14);border-color:rgba(200,169,81,.28)}
 .sponsor-tier--featured .ss.confirmed{padding:2.75rem 2rem;min-height:130px}
-.sponsor-tier--featured .ss-logo{max-width:160px;max-height:56px}
+.sponsor-tier--featured .ss-logo--one{max-height:52px;max-width:140px}
+.sponsor-tier--featured .ss-logo--serhant{max-height:60px;max-width:240px}
+.sponsor-tier--featured .ss-logo--grove{max-height:56px;max-width:220px}
 .tier-group{margin-top:3.5rem}
 .tier-group-hd{font-family:var(--serif);font-size:clamp(22px,2.5vw,28px);font-weight:700;color:var(--cream);margin-bottom:.35rem}
 .tier-group-sub{font-size:15px;font-weight:300;color:rgba(245,240,232,.5);margin-bottom:2rem;max-width:640px;line-height:1.7}
@@ -207,7 +214,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
 .faq-item:last-child{border-bottom:1px solid rgba(200,169,81,.15)}
 .faq-q{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--cream);margin-bottom:.75rem;line-height:1.35}
 .faq-a{font-size:16px;font-weight:300;line-height:1.8;color:rgba(245,240,232,.65)}
-@media(max-width:768px){.about-grid,.sg,.hosts-grid{grid-template-columns:1fr;gap:3rem}.cg{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.tr{grid-template-columns:1fr;gap:.5rem}.tprice{text-align:left}.cc-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.nav-links{display:none}.venue-photo{height:clamp(200px,55vw,320px)}.hero-logos{gap:20px 28px}.hero-logo{max-width:140px}}
+@media(max-width:768px){.about-grid,.sg,.hosts-grid{grid-template-columns:1fr;gap:3rem}.cg{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.tr{grid-template-columns:1fr;gap:.5rem}.tprice{text-align:left}.cc-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.nav-links{display:none}.venue-photo{height:clamp(200px,55vw,320px)}.hero-logos{gap:18px 24px}.hero-logo--one{max-width:130px}.hero-logo--serhant{max-width:min(280px,88vw);height:clamp(40px,11vw,56px)}.hero-logo--grove{max-width:min(220px,80vw)}}
 @media(max-width:480px){.cg{grid-template-columns:1fr}}
 </style>
 </head>
@@ -256,9 +263,9 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
     <div class="hero-presented-block">
       <p class="hero-presented">Presented by</p>
       <div class="hero-logos">
-        <img src="assets/one-fort-myers.png" alt="ONE Fort Myers" class="hero-logo" width="160" height="48">
-        <img src="assets/serhant.png" alt="SERHANT. New Development" class="hero-logo hero-logo--blend" width="160" height="48">
-        <img src="assets/grove-bayshore.png" alt="The Grove at Bayshore" class="hero-logo hero-logo--blend" width="160" height="48">
+        <img src="assets/one-fort-myers.png" alt="ONE Fort Myers" class="hero-logo hero-logo--one" width="240" height="72">
+        <img src="assets/serhant.png" alt="SERHANT. New Development" class="hero-logo hero-logo--serhant" width="2400" height="600">
+        <img src="assets/grove-bayshore.png" alt="The Grove at Bayshore" class="hero-logo hero-logo--grove" width="2400" height="900">
       </div>
     </div>
     <p class="hero-hosted">Hosted by Justin Jamison &amp; Geoff Moore</p>
@@ -511,9 +518,9 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
       <div class="sponsor-tier sponsor-tier--featured">
         <p class="sponsor-tier-hd">Title Sponsors</p>
         <div class="sgrid">
-          <div class="ss confirmed"><img src="assets/one-fort-myers.png" alt="ONE Fort Myers" class="ss-logo" width="140" height="48"><div class="ol">ONE Fort Myers<br>Title Sponsor</div></div>
-          <div class="ss confirmed"><img src="assets/serhant.png" alt="SERHANT. New Development" class="ss-logo ss-logo--blend" width="160" height="48"><div class="ol">SERHANT. New Development<br>Title Sponsor</div></div>
-          <div class="ss confirmed"><img src="assets/grove-bayshore.png" alt="The Grove at Bayshore" class="ss-logo ss-logo--blend" width="160" height="56"><div class="ol">The Grove at Bayshore<br>Title Sponsor</div></div>
+          <div class="ss confirmed"><img src="assets/one-fort-myers.png" alt="ONE Fort Myers" class="ss-logo ss-logo--one" width="240" height="72"><div class="ol">ONE Fort Myers<br>Title Sponsor</div></div>
+          <div class="ss confirmed"><img src="assets/serhant.png" alt="SERHANT. New Development" class="ss-logo ss-logo--serhant" width="2400" height="600"><div class="ol">SERHANT. New Development<br>Title Sponsor</div></div>
+          <div class="ss confirmed"><img src="assets/grove-bayshore.png" alt="The Grove at Bayshore" class="ss-logo ss-logo--grove" width="2400" height="900"><div class="ol">The Grove at Bayshore<br>Title Sponsor</div></div>
         </div>
       </div>
 
