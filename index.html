@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Swing for the Skyline 2026 | August 8, 2026 | Country Club of Naples</title>
-<meta name="description" content="Swing for the Skyline. August 8, 2026 at Country Club of Naples. A luxury charity golf experience hosted by Justin Jamison and Geoff Moore, presented by ONE Fort Myers. Benefiting the Boys and Girls Club of Lee County.">
+<meta name="description" content="Swing for the Skyline. August 8, 2026 at Country Club of Naples. Presented by The Grove at Bayshore, SERHANT. New Development, and ONE Fort Myers. Benefiting the Boys and Girls Club of Lee County.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -35,13 +35,14 @@ nav{position:sticky;top:0;z-index:50;background:rgba(10,26,15,0.92);backdrop-fil
 @keyframes pf{0%,100%{transform:rotate(15deg) translateY(0)}50%{transform:rotate(15deg) translateY(-12px)}}
 .hero-content{position:relative;z-index:2;max-width:940px}
 @keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-.cobrand{display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(200,169,81,.3);background:rgba(200,169,81,.06);padding:8px 18px;border-radius:2px;margin-bottom:2rem;opacity:0;animation:up .7s ease forwards .2s;flex-wrap:wrap;justify-content:center}
-.cobrand-tag{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-.cobrand-div{width:1px;height:14px;background:rgba(200,169,81,.35)}
 .hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;opacity:0;animation:up .7s ease forwards .35s}
 .hero-title{font-family:var(--serif);font-size:clamp(52px,9.5vw,104px);font-weight:900;line-height:.92;color:var(--cream);margin-bottom:.4rem;opacity:0;animation:up .8s ease forwards .5s}
 .hero-title em{font-style:italic;color:var(--gold-lt);display:block}
-.hero-presented{font-family:var(--mono);font-size:clamp(11px,1.4vw,13px);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:.65rem;opacity:0;animation:up .7s ease forwards .62s}
+.hero-presented-block{margin-bottom:1.25rem;opacity:0;animation:up .7s ease forwards .62s}
+.hero-presented{font-family:var(--mono);font-size:clamp(11px,1.4vw,13px);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.hero-logos{display:flex;align-items:center;justify-content:center;gap:clamp(16px,4vw,40px);flex-wrap:wrap;padding:0 .5rem}
+.hero-logo{height:clamp(32px,5vw,48px);width:auto;max-width:min(160px,30vw);object-fit:contain;flex:0 1 auto}
+.hero-logo--serhant{filter:brightness(0) invert(1)}
 .hero-hosted{font-family:var(--serif);font-size:clamp(17px,2vw,24px);font-style:italic;color:rgba(245,240,232,.8);margin-bottom:.5rem;opacity:0;animation:up .7s ease forwards .72s}
 .hero-benefit{font-family:var(--mono);font-size:clamp(9px,1.1vw,11px);letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.5);margin-bottom:2.5rem;opacity:0;animation:up .7s ease forwards .8s}
 .hero-tagline{font-family:var(--serif);font-size:clamp(16px,1.8vw,22px);font-style:italic;color:rgba(245,240,232,.55);margin-bottom:2rem;opacity:0;animation:up .7s ease forwards .68s}
@@ -125,6 +126,18 @@ hr.rule{border:none;border-top:1px solid rgba(200,169,81,.15);margin:4rem 0}
 .ss.confirmed{background:rgba(200,169,81,.1);border:1px solid rgba(200,169,81,.35);cursor:default}
 .ss.confirmed .ol{color:var(--gold);opacity:1}
 .ss-logo{max-width:140px;width:100%;height:auto;margin-bottom:12px;display:block;object-fit:contain}
+.ss-logo--serhant{filter:brightness(0) invert(1)}
+.sponsor-tier{margin-top:2.5rem}
+.sponsor-tier:first-of-type{margin-top:0}
+.sponsor-tier-hd{font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:12px}
+.sponsor-tier-hd::after{content:'';flex:1;height:1px;background:rgba(200,169,81,.2)}
+.sponsor-tier--featured{margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(200,169,81,.2)}
+.sponsor-tier--featured .sgrid{background:rgba(200,169,81,.14);border-color:rgba(200,169,81,.28)}
+.sponsor-tier--featured .ss.confirmed{padding:2.75rem 2rem;min-height:130px}
+.sponsor-tier--featured .ss-logo{max-width:160px;max-height:56px}
+.tier-group{margin-top:3.5rem}
+.tier-group-hd{font-family:var(--serif);font-size:clamp(22px,2.5vw,28px);font-weight:700;color:var(--cream);margin-bottom:.35rem}
+.tier-group-sub{font-size:15px;font-weight:300;color:rgba(245,240,232,.5);margin-bottom:2rem;max-width:640px;line-height:1.7}
 .ss.open{border:2px dashed rgba(200,169,81,.2);background:rgba(200,169,81,.02);cursor:pointer;transition:all .2s}
 .ss.open:hover{background:rgba(200,169,81,.06);border-color:rgba(200,169,81,.4)}
 .sponsor-note{margin-top:2rem;padding:1.5rem 2rem;border:1px solid rgba(200,169,81,.2);background:rgba(200,169,81,.04);font-size:16px;font-weight:300;color:rgba(245,240,232,.72);line-height:1.75;max-width:820px}
@@ -195,7 +208,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
 .faq-item:last-child{border-bottom:1px solid rgba(200,169,81,.15)}
 .faq-q{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--cream);margin-bottom:.75rem;line-height:1.35}
 .faq-a{font-size:16px;font-weight:300;line-height:1.8;color:rgba(245,240,232,.65)}
-@media(max-width:768px){.about-grid,.sg,.hosts-grid{grid-template-columns:1fr;gap:3rem}.cg{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.tr{grid-template-columns:1fr;gap:.5rem}.tprice{text-align:left}.cc-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.nav-links{display:none}.venue-photo{height:clamp(200px,55vw,320px)}}
+@media(max-width:768px){.about-grid,.sg,.hosts-grid{grid-template-columns:1fr;gap:3rem}.cg{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.tr{grid-template-columns:1fr;gap:.5rem}.tprice{text-align:left}.cc-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.nav-links{display:none}.venue-photo{height:clamp(200px,55vw,320px)}.hero-logos{gap:20px 28px}.hero-logo{max-width:140px}}
 @media(max-width:480px){.cg{grid-template-columns:1fr}}
 </style>
 </head>
@@ -222,7 +235,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
 
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo">Swing for the Skyline<span>Presented by ONE Fort Myers</span></div>
+    <div class="nav-logo">Swing for the Skyline<span>Presented by Grove · SERHANT. · ONE</span></div>
     <div class="nav-links">
       <a href="#about" class="nav-link">About</a>
       <a href="#charity" class="nav-link">Charity</a>
@@ -241,7 +254,14 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
   <div class="hero-content">
     <p class="hero-eyebrow">Annual Charity Golf Classic &nbsp;&middot;&nbsp; Back to School Edition</p>
     <h1 class="hero-title">Swing for<em>the Skyline</em></h1>
-    <p class="hero-presented">Presented by ONE Fort Myers</p>
+    <div class="hero-presented-block">
+      <p class="hero-presented">Presented by</p>
+      <div class="hero-logos">
+        <img src="assets/one-fort-myers.png" alt="ONE Fort Myers" class="hero-logo" width="160" height="48">
+        <img src="assets/serhant.png" alt="SERHANT." class="hero-logo hero-logo--serhant" width="160" height="48">
+        <img src="assets/grove-bayshore.png" alt="The Grove at Bayshore" class="hero-logo" width="160" height="48">
+      </div>
+    </div>
     <p class="hero-hosted">Hosted by Justin Jamison &amp; Geoff Moore</p>
     <p class="hero-benefit">Benefiting the Boys &amp; Girls Club of Lee County</p>
     <div class="date-badge">
@@ -272,7 +292,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
       <div class="about-text">
         <p class="lbl">About the Event</p>
         <h2 class="ttl">A luxury charity golf experience.<br><em>A community giving back.</em></h2>
-        <p>A luxury charity golf experience hosted by Justin Jamison and Geoff Moore, presented by ONE Fort Myers. An elevated golf outing bringing together Southwest Florida real estate, development, business, and lifestyle leaders.</p>
+        <p>A luxury charity golf experience hosted by Justin Jamison and Geoff Moore, presented by The Grove at Bayshore, SERHANT. New Development, and ONE Fort Myers. An elevated golf outing bringing together Southwest Florida real estate, development, business, and lifestyle leaders.</p>
         <p>Most events in Southwest Florida slow down during the summer. We saw that as an opportunity, not a reason to wait. With back to school season around the corner, August felt like the right time to bring the community together in support of local kids and families who need it most.</p>
         <p>This is a curated day at Country Club of Naples built around great golf, meaningful connections, and real impact for kids heading back to school in Lee County.</p>
         <p>Limited to 72 golfers. Every spot has a purpose. Every sponsor has a seat at the table.</p>
@@ -364,7 +384,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
       </div>
       <div class="tl">
         <div class="tli"><div class="tl-t">7:30 AM</div><div class="tl-e">Registration &amp; Breakfast</div><div class="tl-d">Check in, sponsor activations open, backpack drop-off begins, breakfast served on the terrace</div></div>
-        <div class="tli"><div class="tl-t">8:15 AM</div><div class="tl-e">Welcome Remarks</div><div class="tl-d">Welcome from hosts Justin Jamison and Geoff Moore, title sponsor ONE Fort Myers, and Boys &amp; Girls Club of Lee County</div></div>
+        <div class="tli"><div class="tl-t">8:15 AM</div><div class="tl-e">Welcome Remarks</div><div class="tl-d">Welcome from hosts Justin Jamison and Geoff Moore, title sponsors The Grove at Bayshore, SERHANT. New Development, and ONE Fort Myers, and Boys &amp; Girls Club of Lee County</div></div>
         <div class="tli"><div class="tl-t">8:30 AM</div><div class="tl-e">Shotgun Start</div><div class="tl-d">18-hole scramble, all foursomes begin simultaneously across the course</div></div>
         <div class="tli"><div class="tl-t">All Morning</div><div class="tl-e">On-Course Competitions</div><div class="tl-d">Long drive challenge, putting contest, and closest to the pin running throughout the round</div></div>
         <div class="tli"><div class="tl-t">Afternoon</div><div class="tl-e">Cocktail Hour</div><div class="tl-d">Golf concludes. The terrace opens with drinks, conversation, and sponsor showcase</div></div>
@@ -481,59 +501,105 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
     <div class="sl-live">
       <div class="ll">Our Sponsors</div>
       <div class="bgcf">
-        <div class="bgcb">Title Sponsor</div>
-        <div class="bgct"><strong>ONE Fort Myers</strong> is proudly serving as the Title Sponsor of Swing for the Skyline, presented across marketing and event materials as the presenting partner.</div>
+        <div class="bgcb">Title Sponsors</div>
+        <div class="bgct"><strong>The Grove at Bayshore, SERHANT. New Development, and ONE Fort Myers</strong> are the Title Sponsors of Swing for the Skyline, presented across marketing and event materials.</div>
       </div>
       <div class="bgcf">
         <div class="bgcb">Charity Partner</div>
         <div class="bgct"><strong>Boys &amp; Girls Club of Lee County</strong>. Official charity partner and Back to School Backpack Drive beneficiary. <strong>100% of net proceeds</strong> from this event benefit the Club.</div>
       </div>
-      <div class="sgrid">
-        <div class="ss confirmed"><img src="assets/one-fort-myers.png" alt="ONE Fort Myers" class="ss-logo" width="140" height="48"><div class="ol">ONE Fort Myers<br>Title Sponsor</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Platinum Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Platinum Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Gold Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Gold Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Silver Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Silver Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Silver Sponsor<br>Available</div></div>
 
+      <div class="sponsor-tier sponsor-tier--featured">
+        <p class="sponsor-tier-hd">Title Sponsors</p>
+        <div class="sgrid">
+          <div class="ss confirmed"><img src="assets/grove-bayshore.png" alt="The Grove at Bayshore" class="ss-logo" width="160" height="56"><div class="ol">The Grove at Bayshore<br>Title Sponsor</div></div>
+          <div class="ss confirmed"><img src="assets/serhant.png" alt="SERHANT. New Development" class="ss-logo ss-logo--serhant" width="160" height="48"><div class="ol">SERHANT. New Development<br>Title Sponsor</div></div>
+          <div class="ss confirmed"><img src="assets/one-fort-myers.png" alt="ONE Fort Myers" class="ss-logo" width="140" height="48"><div class="ol">ONE Fort Myers<br>Title Sponsor</div></div>
+        </div>
+      </div>
 
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">VIP Lounge Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Golf Cart Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Golf Cart Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cocktail Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Long Drive Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Closest to the Pin Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Community Partner<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Community Partner<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Community Partner<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Community Partner<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Community Partner<br>Available</div></div>
-        <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Community Partner<br>Available</div></div>
+      <div class="sponsor-tier">
+        <p class="sponsor-tier-hd">Duplex Sponsor &middot; $10,000</p>
+        <div class="sgrid">
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Duplex Sponsor<br>Available</div></div>
+        </div>
+      </div>
+      <div class="sponsor-tier">
+        <p class="sponsor-tier-hd">Wave Sponsor &middot; $5,000</p>
+        <div class="sgrid">
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Wave Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Wave Sponsor<br>Available</div></div>
+        </div>
+      </div>
+      <div class="sponsor-tier">
+        <p class="sponsor-tier-hd">Aqua Sponsor &middot; $2,500</p>
+        <div class="sgrid">
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Aqua Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Aqua Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Aqua Sponsor<br>Available</div></div>
+        </div>
+      </div>
+      <div class="sponsor-tier">
+        <p class="sponsor-tier-hd">Beach Sponsor &middot; $1,500</p>
+        <div class="sgrid">
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Beach Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Beach Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Beach Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Beach Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Beach Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Beach Sponsor<br>Available</div></div>
+        </div>
+      </div>
+      <div class="sponsor-tier">
+        <p class="sponsor-tier-hd">Cascade Sponsor &middot; $500</p>
+        <div class="sgrid">
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cascade Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cascade Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cascade Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cascade Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cascade Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cascade Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cascade Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cascade Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cascade Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Cascade Sponsor<br>Available</div></div>
+        </div>
+      </div>
+      <div class="sponsor-tier">
+        <p class="sponsor-tier-hd">Hole Sponsor &middot; $250</p>
+        <div class="sgrid">
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Hole Sponsor<br>Available</div></div>
+        </div>
       </div>
       <p class="sn">Sponsor logos displayed as commitments are confirmed</p>
     </div>
     <hr class="rule">
-    <p class="lbl" style="margin-top:0">Sponsorship Tiers</p>
+    <p class="lbl" style="margin-top:0">Sponsorship Packages</p>
+    <p class="tier-group-sub">Packages are listed in order of visibility and impact. Title Sponsors are reserved for The Grove at Bayshore, SERHANT. New Development, and ONE Fort Myers.</p>
     <div class="tl-list">
       <div class="tr">
-        <div class="tt">Title Sponsor</div>
+        <div class="tt">Title Sponsors</div>
         <div>
-          <div class="tn">Title Sponsor</div>
-          <div class="ttag">Reserved for ONE Fort Myers</div>
-          <div class="th">Presented by ONE Fort Myers as the title sponsor across marketing, signage, registration, and event materials.</div>
+          <div class="tn">Title Sponsors</div>
+          <div class="ttag">The Grove at Bayshore &middot; SERHANT. New Development &middot; ONE Fort Myers</div>
+          <div class="th">Presented across marketing, signage, registration, and event materials by all three title partners together.</div>
           <ul class="tp">
-            <li>Presented by ONE Fort Myers across website, invitations, and on-site branding</li>
+            <li>Presented by The Grove at Bayshore, SERHANT. New Development, and ONE Fort Myers across website, invitations, and on-site branding</li>
             <li>Premier logo placement on all event collateral and printed materials</li>
             <li>On-stage recognition during welcome remarks and awards ceremony</li>
             <li>Priority positioning across digital and on-course sponsor touchpoints</li>
@@ -543,149 +609,102 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
         <div class="tprice">Reserved</div>
       </div>
       <div class="tr">
-        <div class="tt">Platinum Sponsor</div>
+        <div class="tt">Title Sponsor / Exclusive</div>
         <div>
-          <div class="tn">Platinum Sponsor</div>
+          <div class="tn">Duplex Sponsor</div>
+          <div class="ttag">1 available · 8 golfer spots / 2 teams</div>
+          <div class="th">Exclusive top-tier partner with maximum visibility across the round and every touchpoint leading up to it.</div>
+          <ul class="tp">
+            <li>Presented by [Your Brand] across marketing and event materials</li>
+            <li>Premier logo on website, signage, registration, and collateral</li>
+            <li>On-stage recognition during awards and charity presentation</li>
+            <li>2 complimentary teams &mdash; 8 golfer spots with VIP placement</li>
+            <li>Premium hole activation or custom luxury on-course experience</li>
+            <li>Dedicated social media features and post-event recap spotlight</li>
+            <li>Priority position in all sponsor collateral and printed materials</li>
+          </ul>
+        </div>
+        <div class="tprice">$10,000</div>
+      </div>
+      <div class="tr">
+        <div class="tt">Presenting Sponsor</div>
+        <div>
+          <div class="tn">Wave Sponsor</div>
           <div class="ttag">2 available · 4 golfer spots / 1 team</div>
-          <div class="th">Top-tier visibility for brands aligning with a luxury charity golf experience in Southwest Florida.</div>
+          <div class="th">Strong digital and on-site presence with a full team on the course.</div>
           <ul class="tp">
             <li>Prominent logo across digital and on-site materials</li>
-            <li>1 complimentary team, 4 golfer spots</li>
-            <li>Branded hole signage and on-course presence</li>
-            <li>Social and verbal recognition during event programming</li>
+            <li>1 complimentary team &mdash; 4 golfer spots</li>
+            <li>Branded hole signage</li>
+            <li>Social media recognition pre-event and post-event</li>
+            <li>Verbal recognition during event programming</li>
           </ul>
         </div>
         <div class="tprice">$5,000</div>
       </div>
       <div class="tr">
-        <div class="tt">Gold Sponsor</div>
+        <div class="tt">Supporting Sponsor</div>
         <div>
-          <div class="tn">Gold Sponsor</div>
-          <div class="ttag">2 available · 4 golfer spots</div>
-          <div class="th">Strong brand presence for developers, lenders, luxury brands, and professional partners.</div>
+          <div class="tn">Aqua Sponsor</div>
+          <div class="ttag">3 available · 4 golfer spots</div>
+          <div class="th">Solid brand presence on materials, the website, and the course.</div>
           <ul class="tp">
             <li>Logo placement on event materials and website</li>
-            <li>On-course signage and sponsor recognition</li>
-            <li>Social media mention pre-event and post-event</li>
+            <li>On-course hole signage</li>
+            <li>Social media mention</li>
           </ul>
         </div>
         <div class="tprice">$2,500</div>
       </div>
       <div class="tr">
-        <div class="tt">Silver Sponsor</div>
+        <div class="tt">Community Sponsor</div>
         <div>
-          <div class="tn">Silver Sponsor</div>
-          <div class="ttag">3 available · 2 golfer spots</div>
-          <div class="th">Polished visibility for hospitality, automotive, aviation, and local business partners.</div>
+          <div class="tn">Beach Sponsor</div>
+          <div class="ttag">6 available · 2 golfer spots</div>
+          <div class="th">Community-level visibility with a designated hole and digital presence.</div>
           <ul class="tp">
-            <li>Branded signage at a designated hole</li>
-            <li>Logo placement on event website and program</li>
-            <li>Recognition during sponsor thank-you moments</li>
+            <li>Branded signage at one designated hole</li>
+            <li>Logo placement on event website</li>
+            <li>Mention in event program and materials</li>
           </ul>
         </div>
         <div class="tprice">$1,500</div>
       </div>
       <div class="tr">
-        <div class="tt">Activation Sponsor</div>
+        <div class="tt">Supporting Sponsor</div>
         <div>
-          <div class="tn">VIP Lounge Sponsor</div>
-          <div class="ttag">1 available</div>
-          <div class="th">Host the post-round VIP lounge experience with premium brand visibility during cocktail hour.</div>
+          <div class="tn">Cascade Sponsor</div>
+          <div class="ttag">10 available · No golfer spots</div>
+          <div class="th">Support the mission with recognition in print, online, and on-site thank-you moments.</div>
           <ul class="tp">
-            <li>Branded VIP lounge naming and signage</li>
-            <li>Logo on lounge materials and event website</li>
-            <li>Recognition during cocktail hour and awards ceremony</li>
+            <li>Logo in event program and website</li>
+            <li>Recognition as supporting sponsor</li>
+            <li>Part of charity impact story</li>
+            <li>Included on sponsor thank-you signage and recognition reel</li>
           </ul>
         </div>
-        <div class="tprice">$3,500</div>
-      </div>
-      <div class="tr">
-        <div class="tt">Activation Sponsor</div>
-        <div>
-          <div class="tn">Golf Cart Sponsor</div>
-          <div class="ttag">2 available</div>
-          <div class="th">Brand the on-course golf cart fleet for consistent visibility throughout the round.</div>
-          <ul class="tp">
-            <li>Logo on golf cart signage</li>
-            <li>Recognition on event website and program</li>
-            <li>Social media mention as an on-course partner</li>
-          </ul>
-        </div>
-        <div class="tprice">$2,000</div>
-      </div>
-      <div class="tr">
-        <div class="tt">Activation Sponsor</div>
-        <div>
-          <div class="tn">Cocktail Sponsor</div>
-          <div class="ttag">1 available</div>
-          <div class="th">Present the post-round cocktail hour with elevated hospitality branding on the terrace.</div>
-          <ul class="tp">
-            <li>Branded cocktail hour signage and materials</li>
-            <li>Logo on event website and printed program</li>
-            <li>Verbal recognition during cocktail hour</li>
-          </ul>
-        </div>
-        <div class="tprice">$2,500</div>
-      </div>
-      <div class="tr">
-        <div class="tt">Competition Sponsor</div>
-        <div>
-          <div class="tn">Long Drive Sponsor</div>
-          <div class="ttag">1 available</div>
-          <div class="th">Own the long drive challenge with branded signage and recognition at the competition hole.</div>
-          <ul class="tp">
-            <li>Branded long drive hole signage</li>
-            <li>Logo on competition materials and website</li>
-            <li>Winner announcement recognition</li>
-          </ul>
-        </div>
-        <div class="tprice">$1,500</div>
-      </div>
-      <div class="tr">
-        <div class="tt">Competition Sponsor</div>
-        <div>
-          <div class="tn">Closest to the Pin Sponsor</div>
-          <div class="ttag">1 available</div>
-          <div class="th">Sponsor the closest to the pin competition on a designated par-3.</div>
-          <ul class="tp">
-            <li>Branded par-3 hole signage</li>
-            <li>Logo on event website and program</li>
-            <li>Recognition when the winner is announced</li>
-          </ul>
-        </div>
-        <div class="tprice">$1,500</div>
+        <div class="tprice">$500</div>
       </div>
       <div class="tr">
         <div class="tt">Hole Sponsor</div>
         <div>
           <div class="tn">Hole Sponsor</div>
-          <div class="ttag">9 available · 1 hole each</div>
-          <div class="th">Put your brand on a designated hole with on-course signage and program recognition.</div>
+          <div class="ttag">15 available · 1 hole each · No golfer spots</div>
+          <div class="th">On-course and digital branding for local businesses and community partners supporting the event.</div>
           <ul class="tp">
             <li>Branded signage at one designated hole</li>
-            <li>Logo on event website and sponsor materials</li>
-            <li>Included in sponsor thank-you recognition</li>
+            <li>Logo placement on event website and program</li>
+            <li>Mention in event program and materials</li>
+            <li>Recognition as supporting sponsor</li>
+            <li>Part of charity impact story</li>
+            <li>Included on sponsor thank-you signage and recognition reel</li>
           </ul>
         </div>
-        <div class="tprice">$1,000</div>
-      </div>
-      <div class="tr">
-        <div class="tt">Community Partner</div>
-        <div>
-          <div class="tn">Community Partner</div>
-          <div class="ttag">6 available · No golfer spots</div>
-          <div class="th">Support the mission with recognition across print, digital, and on-site thank-you moments.</div>
-          <ul class="tp">
-            <li>Logo in event program and website</li>
-            <li>Recognition as a community partner</li>
-            <li>Included in charity impact storytelling</li>
-          </ul>
-        </div>
-        <div class="tprice">$500</div>
+        <div class="tprice">$250</div>
       </div>
     </div>
     <div class="cn">Custom sponsorships and brand activations are available. If you want to create something unique on-course or during the event, let's build it together. <strong>Sponsor commitments requested by June 15, 2026</strong> for inclusion in printed materials and event advertising.</div>
-    <p class="sponsor-note">ONE Fort Myers is proudly serving as the Title Sponsor of Swing for the Skyline. Additional sponsorship opportunities are available for brands and businesses looking to support the event and connect with an elevated Southwest Florida audience.</p>
+    <p class="sponsor-note"><strong>The Grove at Bayshore, SERHANT. New Development, and ONE Fort Myers</strong> are the Title Sponsors of Swing for the Skyline. Additional sponsorship opportunities are available for brands and businesses looking to support the event and connect with an elevated Southwest Florida audience.</p>
 
     <hr style="border:none;border-top:1px solid rgba(200,169,81,.15);margin:4rem 0">
 
@@ -778,16 +797,12 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
           <select id="isel" name="interested-in" onchange="rc()" required>
             <option value="">Select an option</option>
             <optgroup label="Sponsorships">
-              <option value="5000">Platinum Sponsor $5,000</option>
-              <option value="2500">Gold Sponsor $2,500</option>
-              <option value="1500">Silver Sponsor $1,500</option>
-              <option value="3500">VIP Lounge Sponsor $3,500</option>
-              <option value="2000">Golf Cart Sponsor $2,000</option>
-              <option value="2500">Cocktail Sponsor $2,500</option>
-              <option value="1500">Long Drive Sponsor $1,500</option>
-              <option value="1500">Closest to the Pin Sponsor $1,500</option>
-              <option value="1000">Hole Sponsor $1,000</option>
-              <option value="500">Community Partner $500</option>
+              <option value="10000">Duplex Sponsor $10,000</option>
+              <option value="5000">Wave Sponsor $5,000</option>
+              <option value="2500">Aqua Sponsor $2,500</option>
+              <option value="1500">Beach Sponsor $1,500</option>
+              <option value="500">Cascade Sponsor $500</option>
+              <option value="250">Hole Sponsor $250</option>
             </optgroup>
             <optgroup label="Silent Auction">
               <option value="0">Silent Auction Donation (item/experience)</option>
@@ -825,10 +840,10 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
 <footer>
   <div class="fb">
     <span class="fbr">Hosted by Justin Jamison &amp; Geoff Moore</span><div class="fd"></div>
-    <span class="fbr">Presented by ONE Fort Myers</span><div class="fd"></div>
+    <span class="fbr">Presented by Grove · SERHANT. · ONE</span><div class="fd"></div>
     <span class="fbr">Boys &amp; Girls Club of Lee County</span>
   </div>
-  <p class="fn">Hosted by Justin Jamison &amp; Geoff Moore. Presented by ONE Fort Myers.<br>Swing for the Skyline &nbsp;&middot;&nbsp; Saturday, August 8, 2026<br>Country Club of Naples &nbsp;&middot;&nbsp; Naples, Florida<br><br>100% of net proceeds benefit the Boys &amp; Girls Club of Lee County. Sponsor commitments requested by June 15, 2026 for printed materials and event advertising.<br><br>Questions about sponsorships or registration? Reach out and we will get back to you within 48 hours.</p>
+  <p class="fn">Hosted by Justin Jamison &amp; Geoff Moore. Title Sponsors: The Grove at Bayshore, SERHANT. New Development, and ONE Fort Myers.<br>Swing for the Skyline &nbsp;&middot;&nbsp; Saturday, August 8, 2026<br>Country Club of Naples &nbsp;&middot;&nbsp; Naples, Florida<br><br>100% of net proceeds benefit the Boys &amp; Girls Club of Lee County. Sponsor commitments requested by June 15, 2026 for printed materials and event advertising.<br><br>Questions about sponsorships or registration? Reach out and we will get back to you within 48 hours.</p>
 </footer>
 
 <script>
