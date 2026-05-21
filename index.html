@@ -19,7 +19,7 @@ a{color:inherit;text-decoration:none}
 nav{position:sticky;top:0;z-index:50;background:rgba(10,26,15,0.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(200,169,81,0.18);padding:0 24px}
 .nav-inner{max-width:1200px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .nav-logo{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--gold);line-height:1}
-.nav-logo span{font-weight:400;font-style:italic;color:rgba(200,169,81,0.65);font-size:12px;display:block}
+.nav-logo span{font-weight:400;font-style:italic;color:rgba(200,169,81,0.65);font-size:11px;display:block;line-height:1.35;letter-spacing:.04em}
 .nav-links{display:flex;gap:4px}
 .nav-link{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:9px 12px;color:rgba(245,240,232,.65);transition:color .2s}
 .nav-link:hover{color:var(--gold)}
@@ -38,13 +38,6 @@ nav{position:sticky;top:0;z-index:50;background:rgba(10,26,15,0.92);backdrop-fil
 .hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;opacity:0;animation:up .7s ease forwards .35s}
 .hero-title{font-family:var(--serif);font-size:clamp(52px,9.5vw,104px);font-weight:900;line-height:.92;color:var(--cream);margin-bottom:.4rem;opacity:0;animation:up .8s ease forwards .5s}
 .hero-title em{font-style:italic;color:var(--gold-lt);display:block}
-.hero-presented-block{margin-bottom:1.25rem;opacity:0;animation:up .7s ease forwards .62s}
-.hero-presented{font-family:var(--mono);font-size:clamp(11px,1.4vw,13px);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
-.hero-logos{display:flex;align-items:center;justify-content:center;gap:clamp(20px,4vw,48px);flex-wrap:wrap;padding:0 .5rem}
-.hero-logo{display:block;object-fit:contain;flex:0 1 auto;width:auto}
-.hero-logo--one{height:clamp(36px,5vw,52px);max-width:min(150px,28vw)}
-.hero-logo--serhant{height:clamp(44px,6.5vw,64px);max-width:min(320px,48vw)}
-.hero-logo--grove{height:clamp(38px,5.5vw,56px);max-width:min(260px,42vw)}
 .hero-hosted{font-family:var(--serif);font-size:clamp(17px,2vw,24px);font-style:italic;color:rgba(245,240,232,.8);margin-bottom:.5rem;opacity:0;animation:up .7s ease forwards .72s}
 .hero-benefit{font-family:var(--mono);font-size:clamp(9px,1.1vw,11px);letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.5);margin-bottom:2.5rem;opacity:0;animation:up .7s ease forwards .8s}
 .hero-tagline{font-family:var(--serif);font-size:clamp(16px,1.8vw,22px);font-style:italic;color:rgba(245,240,232,.55);margin-bottom:2rem;opacity:0;animation:up .7s ease forwards .68s}
@@ -127,20 +120,22 @@ hr.rule{border:none;border-top:1px solid rgba(200,169,81,.15);margin:4rem 0}
 .ss{background:var(--green);padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:100px}
 .ss.confirmed{background:rgba(200,169,81,.1);border:1px solid rgba(200,169,81,.35);cursor:default}
 .ss.confirmed .ol{color:var(--gold);opacity:1}
-.ss-logo{margin-bottom:12px;display:block;object-fit:contain;width:auto;height:auto}
-.ss-logo--one{max-height:48px;max-width:130px}
-.ss-logo--serhant{max-height:56px;max-width:220px}
-.ss-logo--grove{max-height:52px;max-width:200px}
+.ss-logo{margin-bottom:12px;display:block;object-fit:contain;width:auto;height:auto;max-height:72px;max-width:220px;background:transparent;border:none;padding:0;box-shadow:none;mix-blend-mode:normal}
+.ss-logo--serhant,.ss-logo--grove{mix-blend-mode:lighten}
+.hero-presented{margin-top:18px;text-align:center}
+.hero-presented-label{color:#c8ad4f;font-size:12px;letter-spacing:.32em;text-transform:uppercase;margin-bottom:14px}
+.hero-presented-logos{display:flex;align-items:center;justify-content:center;gap:clamp(28px,4vw,56px);flex-wrap:wrap;background:transparent!important;border:0!important;box-shadow:none!important}
+.hero-presented-logo{display:block;object-fit:contain;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important}
+.hero-presented-logo-one{width:160px;max-height:70px}
+.hero-presented-logo-serhant{width:210px;max-height:58px;mix-blend-mode:lighten!important}
+.hero-presented-logo-grove{width:210px;max-height:68px;mix-blend-mode:lighten!important}
 .sponsor-tier{margin-top:2.5rem}
 .sponsor-tier:first-of-type{margin-top:0}
 .sponsor-tier-hd{font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:12px}
 .sponsor-tier-hd::after{content:'';flex:1;height:1px;background:rgba(200,169,81,.2)}
 .sponsor-tier--featured{margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(200,169,81,.2)}
-.sponsor-tier--featured .sgrid{background:rgba(200,169,81,.14);border-color:rgba(200,169,81,.28)}
-.sponsor-tier--featured .ss.confirmed{padding:2.75rem 2rem;min-height:130px}
-.sponsor-tier--featured .ss-logo--one{max-height:52px;max-width:140px}
-.sponsor-tier--featured .ss-logo--serhant{max-height:60px;max-width:240px}
-.sponsor-tier--featured .ss-logo--grove{max-height:56px;max-width:220px}
+.sponsor-tier--featured .sgrid{grid-template-columns:repeat(3,1fr);background:rgba(200,169,81,.14);border-color:rgba(200,169,81,.28)}
+.sponsor-tier--featured .ss.confirmed{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.75rem 1.25rem;min-height:168px;background:var(--green)}
 .tier-group{margin-top:3.5rem}
 .tier-group-hd{font-family:var(--serif);font-size:clamp(22px,2.5vw,28px);font-weight:700;color:var(--cream);margin-bottom:.35rem}
 .tier-group-sub{font-size:15px;font-weight:300;color:rgba(245,240,232,.5);margin-bottom:2rem;max-width:640px;line-height:1.7}
@@ -214,7 +209,8 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
 .faq-item:last-child{border-bottom:1px solid rgba(200,169,81,.15)}
 .faq-q{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--cream);margin-bottom:.75rem;line-height:1.35}
 .faq-a{font-size:16px;font-weight:300;line-height:1.8;color:rgba(245,240,232,.65)}
-@media(max-width:768px){.about-grid,.sg,.hosts-grid{grid-template-columns:1fr;gap:3rem}.cg{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.tr{grid-template-columns:1fr;gap:.5rem}.tprice{text-align:left}.cc-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.nav-links{display:none}.venue-photo{height:clamp(200px,55vw,320px)}.hero-logos{gap:18px 24px}.hero-logo--one{max-width:130px}.hero-logo--serhant{max-width:min(280px,88vw);height:clamp(40px,11vw,56px)}.hero-logo--grove{max-width:min(220px,80vw)}}
+@media(max-width:768px){.about-grid,.sg,.hosts-grid{grid-template-columns:1fr;gap:3rem}.cg{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}.tr{grid-template-columns:1fr;gap:.5rem}.tprice{text-align:left}.cc-grid{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.nav-links{display:none}.nav-logo span{display:none}.venue-photo{height:clamp(200px,55vw,320px)}.sponsor-tier--featured .sgrid{grid-template-columns:1fr}}
+@media(max-width:700px){.hero-presented-logos{gap:22px}.hero-presented-logo-one{width:135px}.hero-presented-logo-serhant,.hero-presented-logo-grove{width:170px}}
 @media(max-width:480px){.cg{grid-template-columns:1fr}}
 </style>
 </head>
@@ -241,7 +237,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
 
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo">Swing for the Skyline<span>ONE · SERHANT. · Grove</span></div>
+    <div class="nav-logo">Swing for the Skyline<span>Presented by ONE · SERHANT. New Development · The Grove</span></div>
     <div class="nav-links">
       <a href="#about" class="nav-link">About</a>
       <a href="#charity" class="nav-link">Charity</a>
@@ -260,12 +256,12 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
   <div class="hero-content">
     <p class="hero-eyebrow">Annual Charity Golf Classic &nbsp;&middot;&nbsp; Back to School Edition</p>
     <h1 class="hero-title">Swing for<em>the Skyline</em></h1>
-    <div class="hero-presented-block">
-      <p class="hero-presented">Presented by</p>
-      <div class="hero-logos">
-        <img src="assets/one-fort-myers.png" alt="ONE Fort Myers" class="hero-logo hero-logo--one" width="240" height="72">
-        <img src="assets/serhant.png" alt="SERHANT. New Development" class="hero-logo hero-logo--serhant" width="2400" height="600">
-        <img src="assets/grove-bayshore.png" alt="The Grove at Bayshore" class="hero-logo hero-logo--grove" width="2400" height="900">
+    <div class="hero-presented">
+      <div class="hero-presented-label">PRESENTED BY</div>
+      <div class="hero-presented-logos">
+        <img src="assets/one-fort-myers.png" alt="ONE Fort Myers" class="hero-presented-logo hero-presented-logo-one">
+        <img src="assets/serhant.png" alt="SERHANT. New Development" class="hero-presented-logo hero-presented-logo-serhant">
+        <img src="assets/grove-bayshore.png" alt="The Grove at Bayshore" class="hero-presented-logo hero-presented-logo-grove">
       </div>
     </div>
     <p class="hero-hosted">Hosted by Justin Jamison &amp; Geoff Moore</p>
@@ -599,7 +595,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
           <div class="th">Top-tier visibility for brands aligning with a luxury charity golf experience in Southwest Florida.</div>
           <ul class="tp">
             <li>Prominent logo across digital and on-site materials</li>
-            <li>1 complimentary team &mdash; 4 golfer spots</li>
+            <li>1 complimentary team, 4 golfer spots</li>
             <li>Branded hole signage and on-course presence</li>
             <li>Social and verbal recognition during event programming</li>
           </ul>
@@ -793,8 +789,8 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
             </optgroup>
             <optgroup label="Activation Sponsorships">
               <option value="750">Golf Cart Sponsor $750</option>
-              <option value="500">Long Drive Sponsor $500</option>
-              <option value="500">Closest to the Pin Sponsor $500</option>
+              <option value="501">Long Drive Sponsor $500</option>
+              <option value="502">Closest to the Pin Sponsor $500</option>
             </optgroup>
             <optgroup label="Silent Auction">
               <option value="0">Silent Auction Donation (item/experience)</option>
