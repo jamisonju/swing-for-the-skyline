@@ -803,7 +803,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
       <p><a href="mailto:justin.jamison@serhant.com">justin.jamison@serhant.com</a></p>
       <p class="event-contact-phone"><a href="tel:+19138327931">(913) 832-7931</a></p>
     </div>
-    <form id="regForm" name="swing-skyline-registration" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+    <form id="regForm" name="swing-skyline-registration" novalidate>
       <input type="hidden" name="form-name" value="swing-skyline-registration">
       <input type="hidden" name="estimated-total" id="hidden-total" value="$0">
       <div class="fg">
@@ -905,36 +905,64 @@ function hideFormError(){
   err.style.display='none';
 }
 
+function isPaidSelection(value){
+  return value!==''&&value!=='0';
+}
+
+function checkoutEndpoint(){
+  return window.location.origin+'/.netlify/functions/create-checkout';
+}
+
+async function parseCheckoutResponse(res){
+  const text=await res.text();
+  try{
+    return JSON.parse(text);
+  }catch{
+    throw new Error('Payment service unavailable. Please try again in a moment.');
+  }
+}
+
+async function submitNetlifyForm(form){
+  const data=new FormData(form);
+  if(!data.get('form-name')) data.set('form-name','swing-skyline-registration');
+  const res=await fetch('/',{
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:new URLSearchParams(data).toString()
+  });
+  if(!res.ok) throw new Error('submit failed');
+}
+
 document.getElementById('regForm').addEventListener('submit',async function(e){
   e.preventDefault();
+  e.stopPropagation();
   hideFormError();
 
   const form=this;
   const submitBtn=document.getElementById('regSubmit');
   const sel=document.getElementById('isel');
   const interestedIn=sel.value;
+  const originalText=submitBtn.textContent;
 
   document.getElementById('hidden-total').value=document.getElementById('tot').textContent;
 
-  if(interestedIn==='0'){
-    const data=new FormData(form);
-    submitBtn.disabled=true;
-    submitBtn.textContent='Submitting...';
-    try{
-      const res=await fetch(window.location.pathname,{
-        method:'POST',
-        headers:{'Content-Type':'application/x-www-form-urlencoded'},
-        body:new URLSearchParams(data).toString()
-      });
-      if(!res.ok) throw new Error('submit failed');
-      showFormSuccess(form);
-    }catch(err){
-      showFormError('We could not submit your donation request. Please try again or contact Justin Jamison directly.');
-      console.error('Form error:',err);
-    }finally{
-      submitBtn.disabled=false;
-      submitBtn.textContent='Continue to Secure Checkout';
+  if(!isPaidSelection(interestedIn)){
+    if(interestedIn==='0'){
+      submitBtn.disabled=true;
+      submitBtn.textContent='Submitting...';
+      try{
+        await submitNetlifyForm(form);
+        showFormSuccess(form);
+      }catch(err){
+        showFormError('We could not submit your donation request. Please try again or contact Justin Jamison directly.');
+        console.error('Form error:',err);
+      }finally{
+        submitBtn.disabled=false;
+        submitBtn.textContent=originalText;
+      }
+      return;
     }
+    showFormError('Please select a registration or sponsorship option.');
     return;
   }
 
@@ -955,28 +983,27 @@ document.getElementById('regForm').addEventListener('submit',async function(e){
     botField:form.querySelector('[name="bot-field"]').value
   };
 
-  const originalText=submitBtn.textContent;
   submitBtn.disabled=true;
   submitBtn.textContent='Redirecting to checkout...';
 
   try{
-    const res=await fetch('/.netlify/functions/create-checkout',{
+    const res=await fetch(checkoutEndpoint(),{
       method:'POST',
-      headers:{'Content-Type':'application/json'},
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify(payload)
     });
-    const data=await res.json();
+    const data=await parseCheckoutResponse(res);
     if(!res.ok||!data.url){
       throw new Error(data.error||'Checkout could not be started.');
     }
-    window.location.href=data.url;
+    window.location.assign(data.url);
   }catch(err){
     showFormError(err.message||'Something went wrong starting checkout. Please try again or contact us directly.');
     submitBtn.disabled=false;
     submitBtn.textContent=originalText;
     console.error('Checkout error:',err);
   }
-});
+},true);
 </script>
 </body>
 </html>

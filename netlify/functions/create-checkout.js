@@ -1,5 +1,3 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-
 const PRIMARY_PRICES = {
   '800': 80000,
   '250': 25000,
@@ -21,7 +19,10 @@ const ADDONS = [
 function json(statusCode, body) {
   return {
     statusCode,
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'Cache-Control': 'no-store',
+    },
     body: JSON.stringify(body),
   };
 }
@@ -79,9 +80,12 @@ exports.handler = async (event) => {
     return json(405, { error: 'Method not allowed' });
   }
 
-  if (!process.env.STRIPE_SECRET_KEY) {
+  const secretKey = process.env.STRIPE_SECRET_KEY;
+  if (!secretKey) {
     return json(500, { error: 'Payment system is not configured. Please try again later.' });
   }
+
+  const stripe = require('stripe')(secretKey);
 
   let data;
   try {
