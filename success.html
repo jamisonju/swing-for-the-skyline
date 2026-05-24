@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Confirmed | Swing for the Skyline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0A1A0F;--forest:#0F2D1A;--green:#1A4A2A;--gold:#C8A951;--gold-lt:#E8C96A;
+  --cream:#F5F0E8;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;
+}
+html,body{max-width:100%;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--forest);color:var(--cream);min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--gold)}
+.wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:4rem 1.5rem}
+.card{max-width:640px;width:100%;text-align:center;border:1px solid rgba(200,169,81,.25);background:rgba(200,169,81,.06);padding:3rem 2.5rem}
+.lbl{font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+h1{font-family:var(--serif);font-size:clamp(36px,5vw,52px);font-weight:700;line-height:1.1;color:var(--cream);margin-bottom:1rem}
+h1 em{font-style:italic;color:var(--gold-lt)}
+p{font-size:18px;font-weight:300;line-height:1.85;color:rgba(245,240,232,.75);margin-bottom:1rem}
+.details{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.5);margin:1.5rem 0 2rem;line-height:1.9}
+.btn{display:inline-block;margin-top:.5rem;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:16px 36px;background:var(--gold);color:var(--ink);border-radius:2px;font-weight:500;transition:background .2s,transform .15s}
+.btn:hover{background:var(--gold-lt);transform:translateY(-2px)}
+footer{padding:2rem 1.5rem;text-align:center;border-top:1px solid rgba(200,169,81,.1);font-size:13px;color:rgba(245,240,232,.28);font-family:var(--mono);letter-spacing:.08em}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <p class="lbl">Payment Received</p>
+      <h1>You're <em>Confirmed</em></h1>
+      <p>Thank you for registering for Swing for the Skyline. Your spot is reserved and your payment was successful.</p>
+      <p>You will receive a confirmation email from Stripe with your receipt and payment details.</p>
+      <p class="details">Saturday, August 8, 2026<br>Country Club of Naples<br>Naples, Florida</p>
+      <a class="btn" href="https://www.swingfortheskyline.com">Back to Event Site</a>
+    </div>
+  </main>
+  <footer>100% of net proceeds benefit the Boys &amp; Girls Club of Lee County</footer>
+</body>
+</html>
