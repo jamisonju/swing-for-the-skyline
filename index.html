@@ -984,9 +984,11 @@ document.getElementById('regForm').addEventListener('submit',async function(e){
   };
 
   submitBtn.disabled=true;
-  submitBtn.textContent='Redirecting to checkout...';
+  submitBtn.textContent='Saving registration...';
 
   try{
+    await submitNetlifyForm(form);
+    submitBtn.textContent='Redirecting to checkout...';
     const res=await fetch(checkoutEndpoint(),{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
@@ -998,10 +1000,13 @@ document.getElementById('regForm').addEventListener('submit',async function(e){
     }
     window.location.assign(data.url);
   }catch(err){
-    showFormError(err.message||'Something went wrong starting checkout. Please try again or contact us directly.');
+    const message=err.message==='submit failed'
+      ? 'We could not save your registration. Please try again before continuing to payment.'
+      : (err.message||'Something went wrong starting checkout. Please try again or contact us directly.');
+    showFormError(message);
     submitBtn.disabled=false;
     submitBtn.textContent=originalText;
-    console.error('Checkout error:',err);
+    console.error('Registration error:',err);
   }
 },true);
 </script>
