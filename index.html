@@ -237,6 +237,59 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
 @media(max-width:700px){.hero-presented-logos{gap:22px}.hero-presented-logo-one{width:135px}.hero-presented-logo-serhant,.hero-presented-logo-grove{width:170px}}
 @media(max-width:600px){.auction-grid,.prize-grid,.donation-grid,.category-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%;max-width:100%;overflow:hidden;gap:0;box-sizing:border-box}.auction-grid>*,.prize-grid>*,.donation-grid>*,.category-grid>*{min-width:0;max-width:100%;padding:22px 10px!important;box-sizing:border-box}.auction-grid h3,.prize-grid h3,.donation-grid h3,.category-grid h3{font-size:clamp(17px,4.8vw,22px)!important;line-height:1.15;overflow-wrap:break-word}.auction-grid p,.prize-grid p,.donation-grid p,.category-grid p{font-size:clamp(12px,3.4vw,15px)!important;line-height:1.5;overflow-wrap:break-word}}
 @media(max-width:480px){.cg{grid-template-columns:1fr}}
+.event-credit{
+margin-top:1rem;
+font-family:var(--mono);
+font-size:10px;
+letter-spacing:.16em;
+text-transform:uppercase;
+color:rgba(245,240,232,.45);
+}
+
+.event-credit a{
+color:var(--gold);
+text-decoration:none;
+}
+
+.event-credit a:hover{
+color:var(--gold-lt);
+}
+
+.bgcf--media-partner{
+align-items:center;
+flex-wrap:wrap;
+}
+
+.media-partner-link{
+display:flex;
+align-items:center;
+justify-content:center;
+flex-shrink:0;
+}
+
+.media-partner-logo{
+display:block;
+max-width:180px;
+max-height:90px;
+width:auto;
+height:auto;
+object-fit:contain;
+background:transparent;
+border:0;
+box-shadow:none;
+}
+
+@media(max-width:768px){
+.bgcf--media-partner{
+flex-direction:column;
+text-align:center;
+}
+
+.media-partner-logo{
+max-width:160px;
+max-height:80px;
+}
+}
 </style>
 </head>
 <body>
@@ -308,7 +361,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
   <div class="stats-grid">
     <div class="stat"><div class="stat-n">18</div><div class="stat-l">Holes</div></div>
     <div class="stat"><div class="stat-n">72</div><div class="stat-l">Golfer Spots</div></div>
-    <div class="stat"><div class="stat-n">6</div><div class="stat-l">On-Course Competitions</div></div>
+    <div class="stat"><div class="stat-n">6</div><div class="stat-l">Experiences &amp; Competitions</div></div>
     <div class="stat"><div class="stat-n">100<span style="font-size:28px">%</span></div><div class="stat-l">To Charity</div></div>
   </div>
 </div>
@@ -405,6 +458,10 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
         <p class="lbl">Day of Events</p>
         <h2 class="ttl">Saturday<br><em>August 8, 2026</em></h2>
         <p class="bdy" style="margin-top:1rem">A full day at one of Southwest Florida's most prestigious private courses, capped with a post-round awards reception and charity presentation on the terrace.</p>
+        <p class="event-credit">
+          Official Photography &amp; Content:
+          <a href="https://stellarhousestudios.com" target="_blank" rel="noopener">Stellar House Studios</a>
+        </p>
         <div class="bp-note">
           <p class="bp-lbl">Backpack Drop</p>
           <p>Bring a filled backpack to registration. Bins are open all morning for golfers and guests.</p>
@@ -471,7 +528,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
       All registration includes: 18-hole scramble round, breakfast, two drink tickets, and access to all on-course competitions. Additional add-ons available at registration and on the day of the event. Sponsorship spots include complimentary golfer spots as outlined in the tier details below. <strong>100% of net proceeds benefit the Boys &amp; Girls Club of Lee County.</strong>
     </div>
 
-    <p class="pricing-urgency">Swing for the Skyline is limited to 72 total golfers to keep the experience intimate and high quality. Sponsor packages include reserved golfer spots, which means individual registration availability is limited. If you are planning to play, we encourage registering early once spots open.</p>
+    <p class="pricing-urgency">Only 72 golfer spots are available. Sponsorships reserve player spots first.</p>
 
     <div style="text-align:center;margin-top:2rem">
       <a href="#register" style="display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:16px 48px;background:#C8A951;color:#0A1A0F;border-radius:2px;font-weight:500;transition:background .2s">Reserve Your Spot</a>
@@ -525,7 +582,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
     <p class="lbl">Sponsorship Opportunities</p>
     <h2 class="ttl">Put Your Brand<br><em>on the Course</em></h2>
     <p class="bdy" style="margin-bottom:1rem;max-width:760px">Sponsorship opportunities are open to select brands, businesses, developers, and local partners looking to align with a luxury charity golf experience in Southwest Florida.</p>
-    <p class="bdy" style="margin-bottom:1.5rem;max-width:760px">Ideal partners include developers, builders, luxury brands, lenders, private aviation companies, hospitality brands, automotive partners, and local businesses. <strong>Sponsor commitments requested by June 15, 2026</strong> for inclusion in printed materials and event advertising.</p>
+    <p class="bdy" style="margin-bottom:1.5rem;max-width:760px">Ideal partners include developers, builders, luxury brands, lenders, private aviation companies, hospitality brands, automotive partners, and local businesses. <strong>Sponsorship placements are first-come, first-served and limited by category.</strong></p>
     <div class="sl-live">
       <div class="ll">Our Sponsors</div>
       <div class="bgcf">
@@ -536,6 +593,19 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
         <div class="bgcb">Charity Partner</div>
         <img src="assets/boys-girls-club-stacked.png" alt="Boys &amp; Girls Clubs of Lee County" class="charity-logo charity-logo--stacked partner-logo" width="120" height="120" loading="lazy" decoding="async">
         <div class="bgct"><strong>Boys &amp; Girls Club of Lee County</strong>. Official charity partner and Back to School Backpack Drive beneficiary. <strong>100% of net proceeds</strong> from this event benefit the Club.</div>
+      </div>
+
+      <div class="sponsor-tier">
+        <p class="sponsor-tier-hd">Media Partner</p>
+        <div class="bgcf bgcf--media-partner">
+          <div class="bgcb">Official Photography &amp; Content</div>
+          <a href="https://stellarhousestudios.com" target="_blank" rel="noopener" class="media-partner-link">
+            <img src="assets/stellar-house-studios.png" alt="Stellar House Studios" class="media-partner-logo" loading="lazy" decoding="async">
+          </a>
+          <div class="bgct">
+            <strong>Stellar House Studios</strong> is the Official Photography &amp; Content Partner of Swing for the Skyline.
+          </div>
+        </div>
       </div>
 
       <div class="sponsor-tier sponsor-tier--featured">
@@ -621,11 +691,11 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
         <div class="tt">Platinum Sponsor</div>
         <div>
           <div class="tn">Platinum Sponsor</div>
-          <div class="ttag">2 available · 4 golfer spots / 1 team</div>
+          <div class="ttag">2 available · 8 golfer spots / 2 teams</div>
           <div class="th">Top-tier visibility for brands aligning with a luxury charity golf experience in Southwest Florida.</div>
           <ul class="tp">
             <li>Prominent logo across digital and on-site materials</li>
-            <li>1 complimentary team, 4 golfer spots</li>
+            <li>2 complimentary teams &mdash; 8 golfer spots</li>
             <li>Branded hole signage and on-course presence</li>
             <li>Social and verbal recognition during event programming</li>
           </ul>
@@ -636,10 +706,11 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
         <div class="tt">Gold Sponsor</div>
         <div>
           <div class="tn">Gold Sponsor</div>
-          <div class="ttag">2 available · 4 golfer spots</div>
+          <div class="ttag">2 available · 4 golfer spots / 1 team</div>
           <div class="th">Strong brand presence for developers, lenders, luxury brands, and professional partners.</div>
           <ul class="tp">
             <li>Logo placement on event materials and website</li>
+            <li>1 complimentary team &mdash; 4 golfer spots</li>
             <li>On-course signage and sponsor recognition</li>
             <li>Social media mention pre-event and post-event</li>
           </ul>
@@ -653,6 +724,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
           <div class="ttag">2 available · 2 golfer spots</div>
           <div class="th">Polished visibility for hospitality, automotive, aviation, and local business partners.</div>
           <ul class="tp">
+            <li>2 complimentary golfer spots</li>
             <li>Branded signage at a designated hole</li>
             <li>Logo placement on event website and program</li>
             <li>Recognition during sponsor thank-you moments</li>
@@ -718,7 +790,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
         <div class="tprice">$250</div>
       </div>
     </div>
-    <div class="cn">Custom sponsorships and brand activations are available. If you want to create something unique on-course or during the event, let's build it together. <strong>Sponsor commitments requested by June 15, 2026</strong> for inclusion in printed materials and event advertising.</div>
+    <div class="cn">Custom sponsorships and brand activations are available. If you want to create something unique on-course or during the event, let's build it together. <strong>Sponsorship placements are first-come, first-served and limited by category.</strong></div>
     <p class="sponsor-note"><strong>ONE Fort Myers, SERHANT. New Development, and The Grove at Bayshore</strong> are the Title Sponsors of Swing for the Skyline. Additional sponsorship opportunities are available for brands and businesses looking to support the event and connect with an elevated Southwest Florida audience.</p>
 
     <hr style="border:none;border-top:1px solid rgba(200,169,81,.15);margin:4rem 0">
@@ -796,7 +868,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
   <div class="csm">
     <p class="lbl">Get Involved</p>
     <h2 class="ttl">Reserve Your<br><em>Spot</em></h2>
-    <p class="bdy" style="margin-bottom:0">Submit your interest below. Our team follows up within 48 hours to confirm availability and next steps. No payment required to hold your place. <strong>Sponsor commitments requested by June 15, 2026</strong> for inclusion in printed materials and event advertising. <strong>100% of net proceeds benefit the Boys &amp; Girls Club of Lee County.</strong></p>
+    <p class="bdy" style="margin-bottom:0">Submit your interest below. Our team follows up within 48 hours to confirm availability and next steps. No payment required to hold your place. <strong>Only 72 golfer spots are available. Sponsorships reserve player spots first.</strong> <strong>Sponsorship placements are first-come, first-served and limited by category.</strong> <strong>100% of net proceeds benefit the Boys &amp; Girls Club of Lee County.</strong></p>
     <div class="event-contact">
       <p class="event-contact-label">Questions or sponsor inquiries?</p>
       <p class="event-contact-name">Contact Justin Jamison</p>
@@ -868,7 +940,7 @@ footer{background:#040A05;padding:3rem 1.5rem;text-align:center;border-top:1px s
     <span class="fbr">ONE · SERHANT. · Grove</span><div class="fd"></div>
     <span class="fbr">Boys &amp; Girls Club of Lee County</span>
   </div>
-  <p class="fn">Hosted by Justin Jamison &amp; Geoff Moore. Title Sponsors: ONE Fort Myers, SERHANT. New Development, and The Grove at Bayshore.<br>Swing for the Skyline &nbsp;&middot;&nbsp; Saturday, August 8, 2026<br>Country Club of Naples &nbsp;&middot;&nbsp; Naples, Florida &nbsp;&middot;&nbsp; swingfortheskyline.com<br><br>100% of net proceeds benefit the Boys &amp; Girls Club of Lee County. Sponsor commitments requested by June 15, 2026 for printed materials and event advertising.</p>
+  <p class="fn">Hosted by Justin Jamison &amp; Geoff Moore. Title Sponsors: ONE Fort Myers, SERHANT. New Development, and The Grove at Bayshore.<br>Swing for the Skyline &nbsp;&middot;&nbsp; Saturday, August 8, 2026<br>Country Club of Naples &nbsp;&middot;&nbsp; Naples, Florida &nbsp;&middot;&nbsp; swingfortheskyline.com<br><br>100% of net proceeds benefit the Boys &amp; Girls Club of Lee County. Sponsorship placements are first-come, first-served and limited by category.</p>
   <div class="event-contact event-contact-footer">
     <p class="event-contact-label">Questions or sponsor inquiries?</p>
     <p class="event-contact-name">Contact Justin Jamison</p>
