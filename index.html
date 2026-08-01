@@ -281,6 +281,12 @@ background:transparent;
 border:0;
 box-shadow:none;
 }
+.media-partner-logo--goated{
+max-width:200px;
+max-height:72px;
+padding:8px 10px;
+background:rgba(0,0,0,.2);
+}
 
 @media(max-width:768px){
 .bgcf--media-partner{
@@ -295,15 +301,20 @@ max-height:80px;
 }
 
 /* Official event partners, activations, auction donors */
+.sponsor-name-fallback{
+font-family:var(--serif);font-size:20px;font-weight:700;color:var(--gold-lt);text-align:center;line-height:1.25;margin-bottom:12px;padding:8px 6px
+}
 .sponsor-sub{
 display:block;margin-top:6px;font-size:8px;letter-spacing:.14em;opacity:.65
 }
 .activation-featured{
-grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.28);padding:2rem 1.75rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:1.75rem;align-items:center
+grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.28);padding:2rem 1.75rem;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2rem;align-items:center
 }
 .activation-featured-media{display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center}
 .activation-featured-logo{display:block;max-width:200px;max-height:72px;width:auto;height:auto;object-fit:contain;padding:8px;background:transparent}
-.activation-featured-photo{display:block;width:100%;max-width:220px;max-height:220px;object-fit:contain;padding:6px;background:rgba(0,0,0,.15);border:1px solid rgba(200,169,81,.18)}
+.activation-featured-photo{display:block;width:100%;max-width:560px;max-height:none;height:auto;object-fit:contain;padding:0;background:rgba(0,0,0,.15);border:1px solid rgba(200,169,81,.18)}
+.activation-featured-photo--fallback,.activation-featured-logo--fallback{display:flex;align-items:center;justify-content:center;min-height:72px;border:1px solid rgba(200,169,81,.2);background:rgba(200,169,81,.05);font-family:var(--serif);font-size:18px;font-weight:700;color:var(--gold-lt);padding:1rem;text-align:center;line-height:1.3}
+.activation-featured-photo--fallback{min-height:160px;max-width:220px;width:100%}
 .activation-featured-body{min-width:0}
 .activation-featured-eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
 .activation-featured-name{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--gold-lt);margin-bottom:.35rem;line-height:1.2}
@@ -316,6 +327,7 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
 .cc2-logo{display:block;max-width:160px;max-height:48px;width:auto;height:auto;object-fit:contain;margin:12px auto 0;padding:6px;background:transparent}
 .cc2-media{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:12px}
 .cc2-photo{display:block;width:56px;height:56px;object-fit:contain;padding:4px;border:1px solid rgba(200,169,81,.2);background:rgba(0,0,0,.12)}
+.cc2-photo--fallback{display:flex;align-items:center;justify-content:center;width:56px;height:56px;font-family:var(--mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,169,81,.2);text-align:center;line-height:1.2;padding:4px}
 .auction-partners{margin:0 0 2.5rem}
 .auction-partners-hd{font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:12px}
 .auction-partners-hd::after{content:'';flex:1;height:1px;background:rgba(200,169,81,.2)}
@@ -323,6 +335,7 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
 .auction-partner-card{background:var(--green);min-height:120px;padding:18px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .auction-partner-card img,.auction-partner-logo{display:block;max-width:70%;max-height:48px;width:auto;height:auto;object-fit:contain;margin:0 auto 10px;padding:4px;background:transparent}
 .auction-partner-name{font-family:var(--mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);line-height:1.4}
+.auction-partner-fallback{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--gold-lt);margin-bottom:10px;line-height:1.25}
 @media(max-width:768px){
 .activation-featured{grid-template-columns:1fr;text-align:center}
 .activation-featured-tags{justify-content:center}
@@ -421,7 +434,7 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
       <div class="fc">
         <p class="lbl" style="margin-bottom:1.5rem">The Format</p>
         <div class="fi"><span class="fi-icon">&#127953;</span><div><div class="fi-ttl">18-Hole Scramble</div><div class="fi-dsc">4-person teams, shotgun start at 8:30 AM</div></div></div>
-        <div class="fi"><span class="fi-icon">&#127919;</span><div><div class="fi-ttl">On-Course Competitions</div><div class="fi-dsc">Professional long-drive experience, $10,000 hole-in-one contest, putting contest, and closest to the pin</div></div></div>
+        <div class="fi"><span class="fi-icon">&#127919;</span><div><div class="fi-ttl">On-Course Competitions</div><div class="fi-dsc">Professional long-drive experience, $10,000 hole-in-one contest presented by Shepherd Insurance, and putting contest</div></div></div>
         <div class="fi"><span class="fi-icon">&#127378;</span><div><div class="fi-ttl">Awards Reception</div><div class="fi-dsc">Post-round reception with prizes and charity presentation</div></div></div>
         <div class="fi"><span class="fi-icon">&#127890;</span><div><div class="fi-ttl">Backpack Drive</div><div class="fi-dsc">Bring a filled backpack. Change a kid's school year.</div></div></div>
         <div class="fi" style="margin-bottom:0"><span class="fi-icon">&#127961;</span><div><div class="fi-ttl">Awards &amp; Charity Presentation</div><div class="fi-dsc">Competition winners, charity moment, and closing celebration on the terrace</div></div></div>
@@ -512,7 +525,7 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
         <div class="tli"><div class="tl-t">7:30 AM</div><div class="tl-e">Registration &amp; Breakfast</div><div class="tl-d">Check in, sponsor activations open, backpack drop-off begins, breakfast served on the terrace</div></div>
         <div class="tli"><div class="tl-t">8:15 AM</div><div class="tl-e">Welcome Remarks</div><div class="tl-d">Welcome from hosts Justin Jamison and Geoff Moore, title sponsors ONE Fort Myers, SERHANT. New Development, and The Grove at Bayshore, and Boys &amp; Girls Club of Lee County</div></div>
         <div class="tli"><div class="tl-t">8:30 AM</div><div class="tl-e">Shotgun Start</div><div class="tl-d">18-hole scramble, all foursomes begin simultaneously across the course</div></div>
-        <div class="tli"><div class="tl-t">All Morning</div><div class="tl-e">On-Course Competitions</div><div class="tl-d">Professional long-drive experience with Briana Morris, $10,000 hole-in-one contest, putting contest, and closest to the pin running throughout the round</div></div>
+        <div class="tli"><div class="tl-t">All Morning</div><div class="tl-e">On-Course Competitions</div><div class="tl-d">Professional long-drive experience with Briana Morris, $10,000 hole-in-one contest presented by Shepherd Insurance, and putting contest running throughout the round</div></div>
         <div class="tli"><div class="tl-t">Afternoon</div><div class="tl-e">Post-Round Reception</div><div class="tl-d">Golf concludes. The terrace opens with drinks, conversation, and sponsor showcase</div></div>
         <div class="tli" style="padding-bottom:0"><div class="tl-t">Awards Ceremony</div><div class="tl-e">Awards &amp; Charity Moment</div><div class="tl-d">Competition winners announced, charity check and backpack count presented, and sponsor recognition</div></div>
       </div>
@@ -538,12 +551,11 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
       <div class="cc2">
         <span class="cc2-icon">&#127919;</span>
         <div class="cc2-name">$10,000 Hole-in-One Contest</div>
-        <div class="cc2-desc">Take your shot at a $10,000 hole-in-one prize, presented by Shepherd Insurance.</div>
+        <div class="cc2-desc">Take your shot at a $10,000 hole-in-one prize on a designated par-3, presented by Shepherd Insurance.</div>
         <img src="assets/shepherd-insurance-logo.png" alt="Shepherd Insurance – $10,000 Hole-in-One Contest Sponsor" class="cc2-logo" loading="lazy" decoding="async">
         <div class="cc2-price">Presented by Shepherd Insurance</div>
       </div>
       <div class="cc2"><span class="cc2-icon">&#9971;</span><div class="cc2-name">Putting Contest</div><div class="cc2-desc">Open all morning on the practice green. Best putt or lowest score takes home a prize package.</div><div class="cc2-price">$20 per attempt</div></div>
-      <div class="cc2"><span class="cc2-icon">&#127919;</span><div class="cc2-name">Closest to the Pin</div><div class="cc2-desc">One designated par-3. One shot. Bragging rights and a prize for the winner.</div><div class="cc2-price">$10 entry</div></div>
       <div class="cc2"><span class="cc2-icon">&#128207;</span><div class="cc2-name">Putting Yardstick</div><div class="cc2-desc">The scramble classic. Use it on any putt during your round. One of the best investments on the course.</div><div class="cc2-price">$50 each</div></div>
       <div class="cc2"><span class="cc2-icon">&#127183;</span><div class="cc2-name">Mulligan Packages</div><div class="cc2-desc">Single mulligan, 3-pack, or the Full Package with mulligans, foot wedge, and string included.</div><div class="cc2-price">From $25</div></div>
       <div class="cc2"><span class="cc2-icon">&#127903;</span><div class="cc2-name">Raffle</div><div class="cc2-desc">Prizes donated by sponsors: golf gear, dining packages, spa, wine, and more.</div><div class="cc2-price">$20 per ticket</div></div>
@@ -665,7 +677,7 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
         </div>
         <div class="bgcf bgcf--media-partner">
           <div class="bgcb">Official Apparel Partner</div>
-          <img src="assets/goated-golf-logo.jpg" alt="GOATED Golf – Official Apparel Partner" class="media-partner-logo" loading="lazy" decoding="async">
+          <img src="assets/goated-golf-logo.png" alt="GOATED Golf – Official Apparel Partner" class="media-partner-logo media-partner-logo--goated" loading="lazy" decoding="async">
           <div class="bgct">
             <strong>GOATED Golf</strong> is the Official Apparel Partner of Swing for the Skyline.
           </div>
@@ -685,7 +697,6 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
         <p class="sponsor-tier-hd">Platinum Sponsor &middot; $5,000</p>
         <div class="sgrid">
           <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Platinum Sponsor<br>Available</div></div>
-          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Platinum Sponsor<br>Available</div></div>
         </div>
       </div>
       <div class="sponsor-tier">
@@ -695,7 +706,6 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
             <img src="assets/shepherd-insurance-logo.png" alt="Shepherd Insurance – Gold Sponsor" class="sponsor-logo" loading="lazy" decoding="async">
             <div class="sponsor-name">Shepherd Insurance<br>Gold Sponsor</div>
           </div>
-          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Gold Sponsor<br>Available</div></div>
         </div>
       </div>
       <div class="sponsor-tier">
@@ -705,8 +715,6 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
             <img src="assets/maxwell-mortgage-square.png" alt="Maxwell Mortgage Team" class="sponsor-logo sponsor-logo--maxwell" loading="lazy" decoding="async">
             <div class="sponsor-name">Maxwell Mortgage Team<br>Silver Sponsor</div>
           </div>
-          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Silver Sponsor<br>Available</div></div>
-          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Silver Sponsor<br>Available</div></div>
         </div>
       </div>
       <div class="sponsor-tier">
@@ -735,8 +743,6 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
             <div class="sponsor-name">Shepherd Insurance<br>$10,000 Hole-in-One Contest Sponsor</div>
           </div>
           <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Golf Cart Sponsor<br>$750 · Available</div></div>
-          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Golf Cart Sponsor<br>$750 · Available</div></div>
-          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Closest to the Pin Sponsor<br>$500 · Available</div></div>
         </div>
       </div>
       <div class="sponsor-tier">
@@ -791,7 +797,7 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
         <div class="tt">Platinum Sponsor</div>
         <div>
           <div class="tn">Platinum Sponsor <span class="platinum-badge">TOP AVAILABLE SPONSORSHIP</span></div>
-          <div class="ttag">2 available · 8 golfer spots / 2 teams</div>
+          <div class="ttag">1 available · 8 golfer spots / 2 teams</div>
           <div class="th">The highest available sponsorship. Maximum visibility, maximum presence, maximum impact.</div>
           <ul class="tp">
             <li>2 complimentary teams &mdash; 8 golfer spots with premium course placement</li>
@@ -810,7 +816,7 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
         <div class="tt">Gold Sponsor</div>
         <div>
           <div class="tn">Gold Sponsor</div>
-          <div class="ttag">1 available · 4 golfer spots / 1 team</div>
+          <div class="ttag">Confirmed · Shepherd Insurance · 4 golfer spots / 1 team</div>
           <div class="th">Strong brand presence for developers, lenders, luxury brands, and professional partners. Confirmed: Shepherd Insurance.</div>
           <ul class="tp">
             <li>Logo placement on event materials and website</li>
@@ -819,14 +825,14 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
             <li>Social media mention pre-event and post-event</li>
           </ul>
         </div>
-        <div class="tprice">$2,500</div>
+        <div class="tprice">Confirmed</div>
       </div>
       <div class="tr">
         <div class="tt">Silver Sponsor</div>
         <div>
           <div class="tn">Silver Sponsor</div>
-          <div class="ttag">2 available · 2 golfer spots</div>
-          <div class="th">Polished visibility for hospitality, automotive, aviation, and local business partners.</div>
+          <div class="ttag">Confirmed · Maxwell Mortgage Team · 2 golfer spots</div>
+          <div class="th">Polished visibility for hospitality, automotive, aviation, and local business partners. Confirmed: Maxwell Mortgage Team.</div>
           <ul class="tp">
             <li>2 complimentary golfer spots</li>
             <li>Branded signage at a designated hole</li>
@@ -834,13 +840,13 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
             <li>Recognition during sponsor thank-you moments</li>
           </ul>
         </div>
-        <div class="tprice">$1,500</div>
+        <div class="tprice">Confirmed</div>
       </div>
       <div class="tr">
         <div class="tt">Activation Sponsor</div>
         <div>
           <div class="tn">Golf Cart Sponsor</div>
-          <div class="ttag">2 available</div>
+          <div class="ttag">1 available</div>
           <div class="th">Brand the on-course golf cart fleet for consistent visibility throughout the round.</div>
           <ul class="tp">
             <li>Logo on golf cart signage</li>
@@ -867,16 +873,17 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
       <div class="tr">
         <div class="tt">Activation Sponsor</div>
         <div>
-          <div class="tn">Closest to the Pin Sponsor</div>
-          <div class="ttag">1 available</div>
-          <div class="th">Sponsor the closest to the pin competition on a designated par-3.</div>
+          <div class="tn">$10,000 Hole-in-One Contest</div>
+          <div class="ttag">Confirmed · Shepherd Insurance</div>
+          <div class="th">Official $10,000 Hole-in-One Contest Sponsor on a designated par-3, presented by Shepherd Insurance.</div>
           <ul class="tp">
+            <li>$10,000 Hole-in-One Contest activation</li>
             <li>Branded par-3 hole signage</li>
             <li>Logo on event website and program</li>
             <li>Recognition when the winner is announced</li>
           </ul>
         </div>
-        <div class="tprice">$500</div>
+        <div class="tprice">Confirmed</div>
       </div>
       <div class="tr">
         <div class="tt">Hole Sponsor</div>
@@ -1013,13 +1020,10 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
             <option value="">Select an option</option>
             <optgroup label="Sponsorships">
               <option value="5000">Platinum Sponsor $5,000</option>
-              <option value="2500">Gold Sponsor $2,500</option>
-              <option value="1500">Silver Sponsor $1,500</option>
               <option value="250">Hole Sponsor $250</option>
             </optgroup>
             <optgroup label="Activation Sponsorships">
               <option value="750">Golf Cart Sponsor $750</option>
-              <option value="502">Closest to the Pin Sponsor $500</option>
             </optgroup>
             <optgroup label="Silent Auction">
               <option value="0">Silent Auction Donation (item/experience)</option>
@@ -1042,7 +1046,7 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
           <span class="ftl">Estimated Total</span>
           <span class="ftv" id="tot">$0</span>
         </div>
-        <div class="f full"><label>Notes / Questions</label><textarea name="notes" placeholder="Sponsorship preferences, dietary restrictions, questions for our team..."></textarea></div>
+        <div class="f full"><label>Golfer Names</label><textarea name="notes" placeholder="List the full names of the golfers in your group (up to 4)..."></textarea></div>
         <button type="submit" class="fsub" id="regSubmit">Continue to Secure Checkout</button>
         <p class="form-error" id="formError" role="alert"></p>
         <p class="fnote">Saturday, August 8, 2026 &nbsp;&middot;&nbsp; Country Club of Naples, Naples FL &nbsp;&middot;&nbsp; swingfortheskyline.com &nbsp;&middot;&nbsp; 100% of net proceeds benefit the Boys &amp; Girls Club of Lee County</p>
