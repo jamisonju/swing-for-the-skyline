@@ -126,7 +126,6 @@ hr.rule{border:none;border-top:1px solid rgba(200,169,81,.15);margin:4rem 0}
 .sponsor-logo{max-height:72px;max-width:220px;object-fit:contain}
 .confirmed-sponsor-card{min-height:160px;padding:28px 22px;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.28);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
 .confirmed-sponsor-card img,.confirmed-sponsor-card .sponsor-logo{display:block;width:auto;height:auto;max-width:80%;max-height:120px;object-fit:contain;margin:0 auto 14px;background:transparent;border:0;box-shadow:none}
-.confirmed-sponsor-card .sponsor-logo--everglades{max-width:92%;max-height:150px}
 .confirmed-sponsor-card .sponsor-logo--maxwell{mix-blend-mode:normal!important;opacity:1!important;visibility:visible!important}
 .confirmed-sponsor-card .sponsor-name{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-align:center;line-height:1.4}
 .ss-logo{margin-bottom:12px;display:block;object-fit:contain;width:auto;height:auto;max-height:72px;max-width:220px;background:transparent;border:none;padding:0;box-shadow:none;mix-blend-mode:normal}
@@ -309,11 +308,13 @@ font-family:var(--serif);font-size:20px;font-weight:700;color:var(--gold-lt);tex
 display:block;margin-top:6px;font-size:8px;letter-spacing:.14em;opacity:.65
 }
 .activation-featured{
-grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.28);padding:2rem 1.75rem;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2rem;align-items:center
+grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,81,.28);padding:2rem 1.75rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:2rem;align-items:center
 }
-.activation-featured-media{display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center}
-.activation-featured-logo{display:block;max-width:200px;max-height:72px;width:auto;height:auto;object-fit:contain;padding:8px;background:transparent}
-.activation-featured-photo{display:block;width:100%;max-width:560px;max-height:none;height:auto;object-fit:contain;padding:0;background:rgba(0,0,0,.15);border:1px solid rgba(200,169,81,.18)}
+.activation-featured-media{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center}
+.activation-featured-logo{display:block;max-width:200px;max-height:72px;width:auto;height:auto;object-fit:contain;padding:0;background:transparent;border:0;box-shadow:none}
+.activation-featured-logo--everglades{max-width:300px;max-height:260px;width:100%}
+.activation-featured-logo--cgi{max-width:280px;max-height:180px;width:100%}
+.activation-featured-photo{display:block;width:100%;max-width:480px;max-height:none;height:auto;object-fit:contain;margin-top:1.25rem;padding:0;background:transparent;border:1px solid rgba(200,169,81,.18)}
 .activation-featured-photo--fallback,.activation-featured-logo--fallback{display:flex;align-items:center;justify-content:center;min-height:72px;border:1px solid rgba(200,169,81,.2);background:rgba(200,169,81,.05);font-family:var(--serif);font-size:18px;font-weight:700;color:var(--gold-lt);padding:1rem;text-align:center;line-height:1.3}
 .activation-featured-photo--fallback{min-height:160px;max-width:220px;width:100%}
 .activation-featured-body{min-width:0}
@@ -325,8 +326,9 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
 .activation-tag{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,169,81,.3);padding:6px 10px}
 .activation-featured-link{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:12px 22px;border-radius:2px;transition:background .2s}
 .activation-featured-link:hover{background:var(--gold-lt)}
-.cc2-logo{display:block;max-width:160px;max-height:48px;width:auto;height:auto;object-fit:contain;margin:12px auto 0;padding:6px;background:transparent}
-.cc2-logo--everglades{max-width:240px;max-height:120px}
+.cc2-logo{display:block;max-width:160px;max-height:48px;width:auto;height:auto;object-fit:contain;margin:12px auto 0;padding:0;background:transparent;border:0;box-shadow:none}
+.cc2-logo--everglades{max-width:220px;max-height:160px}
+.cc2-logo--cgi{max-width:200px;max-height:96px}
 .cc2-media{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:12px}
 .cc2-photo{display:block;width:56px;height:56px;object-fit:contain;padding:4px;border:1px solid rgba(200,169,81,.2);background:rgba(0,0,0,.12)}
 .cc2-photo--fallback{display:flex;align-items:center;justify-content:center;width:56px;height:56px;font-family:var(--mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,169,81,.2);text-align:center;line-height:1.2;padding:4px}
@@ -544,17 +546,14 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
         <span class="cc2-icon">&#127953;</span>
         <div class="cc2-name">Longest Drive Challenge</div>
         <div class="cc2-desc">Compete for the longest drive of the day on a designated hole, sponsored by Everglades Native Designs.</div>
-        <img src="assets/everglades-native-designs-logo.jpg" alt="Everglades Native Designs – Longest Drive Challenge Sponsor" class="cc2-logo cc2-logo--everglades" loading="lazy" decoding="async">
+        <img src="assets/everglades-native-designs-transparent.png" alt="Everglades Native Designs – Longest Drive Challenge Sponsor" class="cc2-logo cc2-logo--everglades" loading="lazy" decoding="async">
         <div class="cc2-price">Sponsored by Everglades Native Designs</div>
       </div>
       <div class="cc2">
         <span class="cc2-icon">&#127953;</span>
         <div class="cc2-name">Professional Long Drive Experience</div>
         <div class="cc2-desc">Meet and tee off with professional golfer Briana Morris on a featured par 5. Each foursome will use Briana's drive and attempt to hole out in two for a chance to win a Pebble Beach golf trip.</div>
-        <div class="cc2-media">
-          <img src="assets/charity-golf-international-logo.png" alt="Charity Golf International – Professional Long Drive Experience" class="cc2-logo" loading="lazy" decoding="async">
-          <img src="assets/briana-morris-feature.jpg" alt="Professional Golfer Briana Morris" class="cc2-photo" loading="lazy" decoding="async">
-        </div>
+        <img src="assets/charity-golf-international-logo.png" alt="Charity Golf International – Professional Long Drive Experience" class="cc2-logo cc2-logo--cgi" loading="lazy" decoding="async">
         <div class="cc2-price">Presented by Charity Golf International</div>
       </div>
       <div class="cc2">
@@ -713,14 +712,20 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
       <div class="sponsor-tier">
         <p class="sponsor-tier-hd">Activation Sponsors</p>
         <div class="sgrid">
-          <div class="confirmed-sponsor-card">
-            <img src="assets/everglades-native-designs-logo.jpg" alt="Everglades Native Designs – Longest Drive Challenge Sponsor" class="sponsor-logo sponsor-logo--everglades" loading="lazy" decoding="async">
-            <div class="sponsor-name">Everglades Native Designs<br>Longest Drive Challenge</div>
+          <div class="activation-featured">
+            <div class="activation-featured-media">
+              <img src="assets/everglades-native-designs-transparent.png" alt="Everglades Native Designs – Longest Drive Challenge Sponsor" class="activation-featured-logo activation-featured-logo--everglades" loading="lazy" decoding="async">
+            </div>
+            <div class="activation-featured-body">
+              <p class="activation-featured-eyebrow">Activation Sponsor</p>
+              <h3 class="activation-featured-name">Longest Drive Challenge</h3>
+              <p class="activation-featured-role">Sponsored by Everglades Native Designs</p>
+              <p class="activation-featured-desc">Compete for the longest drive of the day on a designated hole, sponsored by Everglades Native Designs.</p>
+            </div>
           </div>
           <div class="activation-featured">
             <div class="activation-featured-media">
-              <img src="assets/charity-golf-international-logo.png" alt="Charity Golf International – Professional Long Drive Experience" class="activation-featured-logo" loading="lazy" decoding="async">
-              <img src="assets/briana-morris-feature.jpg" alt="Professional Golfer Briana Morris" class="activation-featured-photo" loading="lazy" decoding="async">
+              <img src="assets/charity-golf-international-logo.png" alt="Charity Golf International – Professional Long Drive Experience" class="activation-featured-logo activation-featured-logo--cgi" loading="lazy" decoding="async">
             </div>
             <div class="activation-featured-body">
               <p class="activation-featured-eyebrow">Activation Sponsor</p>
@@ -733,13 +738,17 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
                 <span class="activation-tag">Pebble Beach Trip Prize</span>
               </div>
               <a class="activation-featured-link" href="https://www.charitygolfintl.com/pros/briana-morris#BrianaMorris" target="_blank" rel="noopener noreferrer">Meet Briana</a>
+              <img src="assets/briana-morris-feature.jpg" alt="Professional Golfer Briana Morris" class="activation-featured-photo" loading="lazy" decoding="async">
             </div>
           </div>
           <div class="confirmed-sponsor-card">
             <img src="assets/shepherd-insurance-logo.png" alt="Shepherd Insurance – $10,000 Hole-in-One Contest Sponsor" class="sponsor-logo" loading="lazy" decoding="async">
             <div class="sponsor-name">Shepherd Insurance<br>$10,000 Hole-in-One Contest Sponsor</div>
           </div>
-          <div class="ss open" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><div class="oi">+</div><div class="ol">Golf Cart Sponsor<br>$750 · Available</div></div>
+          <div class="confirmed-sponsor-card">
+            <img src="assets/colosseum-counsel-logo.jpg" alt="Colosseum Counsel – Golf Cart Sponsor" class="sponsor-logo" loading="lazy" decoding="async">
+            <div class="sponsor-name">Colosseum Counsel<br>Golf Cart Sponsor<span class="sponsor-sub">FightForMe.com</span></div>
+          </div>
         </div>
       </div>
       <div class="sponsor-tier">
@@ -867,15 +876,15 @@ grid-column:1/-1;background:rgba(200,169,81,.08);border:1px solid rgba(200,169,8
         <div class="tt">Activation Sponsor</div>
         <div>
           <div class="tn">Golf Cart Sponsor</div>
-          <div class="ttag">1 available</div>
-          <div class="th">Brand the on-course golf cart fleet for consistent visibility throughout the round.</div>
+          <div class="ttag">Confirmed · Colosseum Counsel / FightForMe.com</div>
+          <div class="th">Brand the on-course golf cart fleet for consistent visibility throughout the round. Confirmed: Colosseum Counsel / FightForMe.com.</div>
           <ul class="tp">
             <li>Logo on golf cart signage</li>
             <li>Recognition on event website and program</li>
             <li>Social media mention as an on-course partner</li>
           </ul>
         </div>
-        <div class="tprice">$750</div>
+        <div class="tprice">Confirmed</div>
       </div>
       <div class="tr">
         <div class="tt">Activation Sponsor</div>
